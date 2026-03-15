@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Martin Kawalski - Sleep & Circadian Medicine</title>
+<meta name="description" content="Dr. Martin Kawalski, MD, PhD - Sleep medicine researcher, speaker, and founder of Zoe Sleep. Book a consultation or download free sleep resources.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F319;</text></svg>">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #080C1A;
+    --surface: rgba(16, 24, 48, 0.7);
+    --border: rgba(74, 108, 247, 0.15);
+    --text: #E8ECF4;
+    --muted: #8B95B8;
+    --accent: #4A6CF7;
+    --mint: #2DD4A8;
+    --gold: #F5C842;
+    --coral: #FF6B6B;
+    --lavender: #C4B5FD;
+    --aurora-1: #0B4D3B;
+    --aurora-2: #1A3A6B;
+    --aurora-3: #2D1854;
+    --aurora-4: #0D2F4F;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ---- AURORA BACKGROUND ---- */
+  .aurora {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .aurora::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 120%;
+    height: 60%;
+    background:
+      radial-gradient(ellipse 80% 50% at 20% 40%, rgba(45, 212, 168, 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 60% 20%, rgba(74, 108, 247, 0.06) 0%, transparent 55%),
+      radial-gradient(ellipse 70% 45% at 80% 50%, rgba(196, 181, 253, 0.05) 0%, transparent 50%),
+      radial-gradient(ellipse 50% 35% at 40% 30%, rgba(45, 212, 168, 0.04) 0%, transparent 50%);
+    animation: aurora-drift 20s ease-in-out infinite alternate;
+    filter: blur(60px);
+  }
+  .aurora::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background:
+      radial-gradient(ellipse 60% 40% at 30% 80%, rgba(74, 108, 247, 0.04) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 30% at 70% 90%, rgba(45, 212, 168, 0.03) 0%, transparent 50%);
+    animation: aurora-drift2 25s ease-in-out infinite alternate;
+    filter: blur(80px);
+  }
+  @keyframes aurora-drift {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(30px, -20px) scale(1.05); }
+    100% { transform: translate(-20px, 10px) scale(0.98); }
+  }
+  @keyframes aurora-drift2 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-30px, -15px) scale(1.03); }
+  }
+
+  /* Stars */
+  .stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 3s ease-in-out infinite alternate;
+  }
+  @keyframes twinkle {
+    0% { opacity: 0.1; }
+    100% { opacity: 0.6; }
+  }
+
+  /* ---- LAYOUT ---- */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ---- NAV ---- */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 16px 0;
+    background: rgba(8, 12, 26, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+  nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-brand {
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+    color: white;
+  }
+  .nav-brand span {
+    background: linear-gradient(135deg, var(--mint), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: white; }
+  .nav-cta {
+    background: linear-gradient(135deg, var(--accent), var(--mint));
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600 !important;
+    transition: transform 0.2s, box-shadow 0.3s !important;
+  }
+  .nav-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(74, 108, 247, 0.3);
+  }
+
+  /* ---- HERO ---- */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .hero-photo {
+    position: relative;
+  }
+  .hero-photo img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(45, 212, 168, 0.15);
+  }
+  .hero-photo::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(45, 212, 168, 0.12), transparent 70%);
+    filter: blur(20px);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(74, 108, 247, 0.12);
+    border: 1px solid rgba(74, 108, 247, 0.25);
+    border-radius: 20px;
+    padding: 5px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  .hero h1 .gradient {
+    background: linear-gradient(135deg, #fff 0%, var(--mint) 50%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero .title {
+    font-size: 18px;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .hero p {
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 28px;
+    max-width: 500px;
+  }
+  .hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), var(--mint));
+    color: white;
+    box-shadow: 0 4px 20px rgba(74, 108, 247, 0.25);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(74, 108, 247, 0.35);
+  }
+  .btn-secondary {
+    background: var(--surface);
+    color: white;
+    border: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+  }
+  .btn-secondary:hover {
+    background: rgba(30, 42, 94, 0.5);
+    border-color: rgba(74, 108, 247, 0.3);
+    transform: translateY(-1px);
+  }
+
+  /* ---- SECTIONS ---- */
+  section {
+    padding: 100px 0;
+  }
+  .section-label {
+    display: inline-block;
+    background: rgba(74, 108, 247, 0.12);
+    border: 1px solid rgba(74, 108, 247, 0.25);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+    color: white;
+  }
+  .section-sub {
+    font-size: 16px;
+    color: var(--muted);
+    max-width: 600px;
+    margin-bottom: 40px;
+    line-height: 1.7;
+  }
+
+  /* ---- CARDS ---- */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+  }
+  .card:hover {
+    border-color: rgba(74, 108, 247, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: 16px 16px 0 0;
+  }
+  .card-mint::before { background: linear-gradient(90deg, var(--mint), var(--accent)); }
+  .card-gold::before { background: linear-gradient(90deg, var(--gold), var(--coral)); }
+  .card-lavender::before { background: linear-gradient(90deg, var(--lavender), var(--accent)); }
+  .card-accent::before { background: linear-gradient(90deg, var(--accent), var(--mint)); }
+
+  .card-icon {
+    font-size: 32px;
+    margin-bottom: 14px;
+  }
+  .card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: white;
+  }
+  .card p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .card .card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    color: var(--mint);
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: gap 0.3s;
+  }
+  .card .card-link:hover { gap: 10px; }
+
+  /* ---- DOWNLOAD SECTION ---- */
+  .download-card {
+    background: linear-gradient(135deg, rgba(74, 108, 247, 0.1), rgba(45, 212, 168, 0.06));
+    border: 1px solid rgba(74, 108, 247, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    transition: all 0.3s;
+  }
+  .download-card:hover {
+    border-color: rgba(74, 108, 247, 0.35);
+    box-shadow: 0 8px 40px rgba(74, 108, 247, 0.1);
+  }
+  .download-preview {
+    flex-shrink: 0;
+    width: 180px;
+    height: 240px;
+    background: linear-gradient(170deg, #0B1026, #111838);
+    border-radius: 12px;
+    border: 1px solid rgba(74, 108, 247, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+  .download-preview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--mint));
+  }
+  .download-preview .icon { font-size: 40px; }
+  .download-preview .label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+  }
+  .download-preview .title-small {
+    font-size: 14px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    line-height: 1.2;
+    padding: 0 16px;
+  }
+  .download-info {
+    flex: 1;
+  }
+  .download-info h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 8px;
+  }
+  .download-info p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .download-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .download-tag {
+    background: rgba(45, 212, 168, 0.1);
+    border: 1px solid rgba(45, 212, 168, 0.2);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 12px;
+    color: var(--mint);
+    font-weight: 500;
+  }
+  .downloads-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* ---- ZOE SECTION ---- */
+  .zoe-section {
+    background: linear-gradient(135deg, rgba(45, 212, 168, 0.04), rgba(74, 108, 247, 0.03));
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .zoe-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .zoe-features {
+    list-style: none;
+    margin-top: 24px;
+  }
+  .zoe-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .zoe-features .check {
+    color: var(--mint);
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .zoe-features li strong {
+    color: white;
+  }
+  .beta-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--mint), var(--accent));
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 10px rgba(45, 212, 168, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(45, 212, 168, 0.4); }
+  }
+  .zoe-mockup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .phone-frame {
+    width: 260px;
+    height: 520px;
+    background: linear-gradient(170deg, #0B1026 0%, #111838 30%, #0E1430 100%);
+    border-radius: 36px;
+    border: 2px solid rgba(74, 108, 247, 0.2);
+    padding: 40px 20px 20px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(45, 212, 168, 0.05);
+  }
+  .phone-frame::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+  .phone-screen {
+    text-align: center;
+    padding-top: 40px;
+  }
+  .phone-screen .app-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+  }
+  .phone-screen .app-name {
+    font-size: 24px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--mint), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 6px;
+  }
+  .phone-screen .app-tag {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 30px;
+  }
+  .phone-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    text-align: center;
+  }
+  .phone-metric {
+    background: rgba(30, 42, 94, 0.5);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 8px;
+  }
+  .phone-metric .val {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 2px;
+  }
+  .phone-metric .label {
+    font-size: 9px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* ---- SPEAKER SECTION ---- */
+  .speaker-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+  }
+  .speaker-box h3 {
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 12px;
+  }
+  .speaker-box p {
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 8px;
+    line-height: 1.7;
+  }
+  .speaker-topics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 20px 0 24px;
+  }
+  .speaker-topic {
+    background: rgba(196, 181, 253, 0.1);
+    border: 1px solid rgba(196, 181, 253, 0.2);
+    color: var(--lavender);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  /* ---- FOOTER ---- */
+  footer {
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  footer p {
+    font-size: 13px;
+    color: var(--muted);
+  }
+  footer a {
+    color: var(--mint);
+    text-decoration: none;
+  }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 768px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+    }
+    .hero-photo { order: -1; }
+    .hero-photo img { max-width: 280px; margin: 0 auto; display: block; }
+    .hero h1 { font-size: 36px; }
+    .hero p { margin: 0 auto 28px; }
+    .hero-buttons { justify-content: center; }
+    .nav-links { display: none; }
+    .download-card { flex-direction: column; text-align: center; padding: 28px; }
+    .download-preview { width: 140px; height: 190px; }
+    .zoe-grid { grid-template-columns: 1fr; }
+    .zoe-mockup { order: -1; }
+    .section-title { font-size: 28px; }
+    .card-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="aurora"></div>
+<div class="stars" id="stars"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <div class="nav-brand">Dr. <span>Kawalski</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#zoe">Zoe Sleep</a></li>
+      <li><a href="#speaker">Speaking</a></li>
+      <li><a href="https://calendly.com/martinkawalski/sleep-consultation" target="_blank" class="nav-cta">Book Consultation</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="about">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">Sleep & Circadian Medicine</div>
+        <h1><span class="gradient">Martin Kawalski</span></h1>
+        <div class="title">MD, PhD - Stanford Sleep Medicine Researcher</div>
+        <p>
+          I help people understand and optimize their sleep through precision circadian medicine.
+          From one-on-one clinical consultations to conference keynotes, my mission is to make
+          the science of sleep actionable for everyone.
+        </p>
+        <div class="hero-buttons">
+          <a href="https://calendly.com/martinkawalski/sleep-consultation" target="_blank" class="btn btn-primary">
+            Book a Consultation
+          </a>
+          <a href="#resources" class="btn btn-secondary">
+            Free Resources
+          </a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="martin.jpeg" alt="Dr. Martin Kawalski" loading="eager">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I DO -->
+<section id="work">
+  <div class="container">
+    <div class="section-label">What I Do</div>
+    <h2 class="section-title">Precision Sleep Medicine</h2>
+    <p class="section-sub">
+      Not all poor sleepers are the same. I use circadian biology, wearable data, and
+      evidence-based protocols to build personalized interventions that actually work.
+    </p>
+    <div class="card-grid">
+      <div class="card card-mint">
+        <div class="card-icon">&#x1F9EC;</div>
+        <h3>Sleep Consultations</h3>
+        <p>
+          Comprehensive sleep assessment including chronotype profiling, wearable data analysis,
+          and a personalized protocol covering light timing, supplements, temperature,
+          and behavioral interventions.
+        </p>
+        <a href="https://calendly.com/martinkawalski/sleep-consultation" target="_blank" class="card-link">
+          Book now <span>&rarr;</span>
+        </a>
+      </div>
+      <div class="card card-gold">
+        <div class="card-icon">&#x1F52C;</div>
+        <h3>Research</h3>
+        <p>
+          Stanford IRB-approved research studying sleep and circadian rhythms in centenarians
+          across Blue Zones (Sardinia & Okinawa). Co-investigator with Dr. Robson Capasso,
+          Chief of Sleep Surgery at Stanford.
+        </p>
+      </div>
+      <div class="card card-lavender">
+        <div class="card-icon">&#x1F3A4;</div>
+        <h3>Speaking & Teaching</h3>
+        <p>
+          Keynotes on sleep science, circadian medicine, and mental health for conferences,
+          corporate wellness programs, and medical education.
+          Evidence-based, engaging, and actionable.
+        </p>
+        <a href="#speaker" class="card-link">
+          Book as speaker <span>&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOADABLE RESOURCES -->
+<section id="resources">
+  <div class="container">
+    <div class="section-label">Free Resources</div>
+    <h2 class="section-title">Download & Learn</h2>
+    <p class="section-sub">
+      Evidence-based materials from my talks and clinical practice.
+      Free to download, share, and use.
+    </p>
+
+    <div class="downloads-stack">
+      <!-- Sleep Blueprint PDF -->
+      <div class="download-card">
+        <div class="download-preview">
+          <div class="icon">&#x1F4CB;</div>
+          <div class="title-small">Your Sleep Blueprint</div>
+          <div class="label">4-Page PDF</div>
+        </div>
+        <div class="download-info">
+          <h3>Your Sleep Blueprint - Cheat Sheet</h3>
+          <p>
+            A 4-page evidence-based guide covering chronotype assessment, personalized protocols,
+            the validated supplement stack, bedroom optimization hacks, coping strategies for
+            jet lag and shift work, and a 7-day quick start plan. All references included.
+          </p>
+          <div class="download-tags">
+            <span class="download-tag">Chronotype Quiz</span>
+            <span class="download-tag">Supplement Stack</span>
+            <span class="download-tag">Bedroom Hacks</span>
+            <span class="download-tag">12 References</span>
+          </div>
+          <a href="sleep-blueprint.pdf" download class="btn btn-primary" style="font-size:14px; padding:12px 24px;">
+            Download PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- Basel Talk Slides -->
+      <div class="download-card">
+        <div class="download-preview">
+          <div class="icon">&#x1F3AC;</div>
+          <div class="title-small">Sleep & Mental Health</div>
+          <div class="label">Conference Deck</div>
+        </div>
+        <div class="download-info">
+          <h3>Sleep & Mental Health - Basel Conference Talk</h3>
+          <p>
+            Full slide deck from my recent talk in Basel exploring the bidirectional relationship
+            between sleep and mental health, the global insomnia epidemic, and evidence-based
+            interventions for better sleep and emotional well-being.
+          </p>
+          <div class="download-tags">
+            <span class="download-tag">Sleep Science</span>
+            <span class="download-tag">Mental Health</span>
+            <span class="download-tag">Conference Slides</span>
+          </div>
+          <a href="https://pitch.com/v/sleep-and-mental-health-rk7qv6" target="_blank" class="btn btn-secondary" style="font-size:14px; padding:12px 24px;">
+            View Slides
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZOE SLEEP -->
+<section class="zoe-section" id="zoe">
+  <div class="container">
+    <div class="zoe-grid">
+      <div>
+        <div class="beta-badge">Beta Testers Welcome</div>
+        <h2 class="section-title">Meet Zoe Sleep</h2>
+        <p class="section-sub" style="margin-bottom: 0;">
+          A precision sleep platform that makes your wearable truly useful.
+          Zoe doesn't just give you a sleep score - it tells you <strong style="color:white">why</strong>
+          you slept poorly and exactly what to change.
+        </p>
+        <ul class="zoe-features">
+          <li>
+            <span class="check">&#x2713;</span>
+            <span><strong>Works with your wearable</strong> - Apple Watch, Oura, WHOOP, Garmin, or any device</span>
+          </li>
+          <li>
+            <span class="check">&#x2713;</span>
+            <span><strong>Phenotype-first approach</strong> - understand your unique sleep biology before changing anything</span>
+          </li>
+          <li>
+            <span class="check">&#x2713;</span>
+            <span><strong>Physician-designed protocols</strong> - every recommendation reviewed by a sleep medicine specialist</span>
+          </li>
+          <li>
+            <span class="check">&#x2713;</span>
+            <span><strong>Continuously improving</strong> - your plan evolves with your data, every cycle makes it smarter</span>
+          </li>
+        </ul>
+        <div style="display:flex; gap:12px; margin-top:28px; flex-wrap:wrap;">
+          <a href="https://zoe-sleep.com" target="_blank" class="btn btn-primary">
+            Join the Beta
+          </a>
+          <a href="https://calendly.com/martinkawalski/sleep-consultation" target="_blank" class="btn btn-secondary">
+            Start with a Consultation
+          </a>
+        </div>
+      </div>
+      <div class="zoe-mockup">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="app-icon">&#x1F319;</div>
+            <div class="app-name">Zoe Sleep</div>
+            <div class="app-tag">Precision Sleep Performance</div>
+            <div class="phone-metrics">
+              <div class="phone-metric">
+                <div class="val" style="color:var(--mint)">92</div>
+                <div class="label">Sleep Score</div>
+              </div>
+              <div class="phone-metric">
+                <div class="val" style="color:var(--lavender)">87%</div>
+                <div class="label">Efficiency</div>
+              </div>
+              <div class="phone-metric">
+                <div class="val" style="color:var(--gold)">1:22</div>
+                <div class="label">Deep Sleep</div>
+              </div>
+              <div class="phone-metric">
+                <div class="val" style="color:var(--accent)">45ms</div>
+                <div class="label">HRV</div>
+              </div>
+            </div>
+            <div style="margin-top:20px; padding:12px; background:rgba(45,212,168,0.1); border:1px solid rgba(45,212,168,0.2); border-radius:10px;">
+              <div style="font-size:10px; color:var(--mint); font-weight:600; margin-bottom:4px;">TODAY'S INSIGHT</div>
+              <div style="font-size:11px; color:var(--muted); line-height:1.4;">Your caffeine at 2 PM delayed sleep onset by ~25 min. Try cutting off by noon.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKER -->
+<section id="speaker">
+  <div class="container">
+    <div class="section-label">Speaking</div>
+    <h2 class="section-title" style="text-align:center;">Book Me as a Speaker</h2>
+    <p class="section-sub" style="text-align:center; margin: 0 auto 40px;">
+      Engaging, evidence-based talks on sleep science and circadian medicine
+      for conferences, corporate wellness, and medical education.
+    </p>
+    <div class="speaker-box">
+      <h3>Available Topics</h3>
+      <div class="speaker-topics">
+        <span class="speaker-topic">Sleep & Mental Health</span>
+        <span class="speaker-topic">Circadian Medicine</span>
+        <span class="speaker-topic">Sleep Optimization for Leaders</span>
+        <span class="speaker-topic">Longevity & Sleep</span>
+        <span class="speaker-topic">Wearable Data in Clinical Practice</span>
+        <span class="speaker-topic">Sleep in Blue Zones</span>
+      </div>
+      <p>
+        I speak at medical conferences, corporate retreats, and wellness events worldwide.
+        Each talk is tailored to your audience and includes actionable takeaways.
+      </p>
+      <div style="margin-top:24px;">
+        <a href="mailto:martin@zoe-sleep.com?subject=Speaking%20Inquiry" class="btn btn-primary">
+          Inquire About Speaking
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p style="margin-bottom:8px;">
+      <a href="mailto:martin@zoe-sleep.com">martin@zoe-sleep.com</a> &nbsp;&bull;&nbsp;
+      <a href="https://zoe-sleep.com" target="_blank">zoe-sleep.com</a> &nbsp;&bull;&nbsp;
+      Stanford-affiliated
+    </p>
+    <p>&copy; 2026 Dr. Martin Kawalski. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// Generate stars
+const starsEl = document.getElementById('stars');
+for (let i = 0; i < 60; i++) {
+  const star = document.createElement('div');
+  star.className = 'star';
+  star.style.left = Math.random() * 100 + '%';
+  star.style.top = Math.random() * 100 + '%';
+  star.style.width = (Math.random() * 2 + 1) + 'px';
+  star.style.height = star.style.width;
+  star.style.animationDelay = Math.random() * 3 + 's';
+  star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+  starsEl.appendChild(star);
+}
+
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+
+</body>
+</html>
