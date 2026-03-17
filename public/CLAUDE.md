@@ -14,7 +14,9 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #4711 | 6:37 PM | ✅ | Updated consultation availability locations in contact section | ~311 |
 | #4707 | 6:35 PM | 🔴 | Fixed photo size and contact form configuration with Formspree email endpoint | ~273 |
+| #4704 | 6:34 PM | ✅ | Increased hero headshot size from 240px to 320px for enhanced visibility | ~359 |
 | #4701 | 1:51 PM | 🔄 | Redesigned website with larger photo, real tool links, white PDF background, and subtle Stanford branding | ~592 |
 | #4694 | 1:44 PM | ✅ | Contact form endpoint updated to new Formspree form ID | ~348 |
 | #4690 | 1:32 PM | 🔄 | Complete website redesign with Stanford branding and contact form integration | ~650 |
