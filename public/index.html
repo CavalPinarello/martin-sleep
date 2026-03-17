@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dr. Martin Kawalski - Sleep & Circadian Medicine</title>
-<meta name="description" content="Dr. Martin Kawalski, MD, PhD - Stanford sleep medicine researcher. Book a consultation, download free sleep resources, or join the Zoe Sleep beta.">
+<meta name="description" content="Dr. Martin Kawalski, MD, PhD - Sleep and circadian medicine specialist. Book a consultation, download free sleep resources, or join the Zoe Sleep beta.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F319;</text></svg>">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
@@ -133,8 +133,8 @@
     flex-shrink: 0;
   }
   .hero-photo img {
-    width: 160px;
-    height: 160px;
+    width: 240px;
+    height: 240px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center 15%;
@@ -559,10 +559,12 @@
     <div class="hero-text">
       <div class="label">Sleep & Circadian Medicine</div>
       <h1>Dr. Martin Kawalski</h1>
-      <div class="role">MD, PhD - <b>Stanford</b> Sleep Medicine Researcher</div>
+      <div class="role">MD, PhD - Physician & Sleep Researcher</div>
       <p>
         I help people understand and fix their sleep through precision circadian medicine.
-        From clinical consultations to conference keynotes, I make sleep science actionable.
+        As a researcher at Stanford School of Medicine and founder of Zoe Sleep,
+        I bring clinical science to personalized sleep interventions - from one-on-one
+        consultations to conference keynotes.
       </p>
       <div class="hero-buttons">
         <a href="#contact" class="btn btn-primary">Book a Consultation</a>
@@ -625,38 +627,18 @@
     <h2 class="section-title">Interactive Sleep Tools</h2>
     <p class="section-sub">Free tools to assess and understand your sleep. No signup required.</p>
 
-    <div class="tools-grid">
-      <div class="tool-card">
-        <div class="tool-icon">&#x1F9D3;</div>
-        <h3>Sleep Age Simulator</h3>
-        <p>See how your sleep habits affect your biological age. Compare your metrics against population norms.</p>
-        <a href="https://zoe-sleep.com/tools/sleep-age" target="_blank" class="btn btn-outline" style="font-size:13px; padding:8px 16px;">
-          Try It Free
-        </a>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon">&#x2600;&#xFE0F;</div>
-        <h3>Chronotype Assessment</h3>
-        <p>Discover if you're a Morning Lark, Intermediate, Evening Owl, or Sensitive Sleeper.</p>
-        <a href="https://zoe-sleep.com/tools/chronotype" target="_blank" class="btn btn-outline" style="font-size:13px; padding:8px 16px;">
-          Take the Quiz
-        </a>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon">&#x2708;&#xFE0F;</div>
-        <h3>Jet Lag Calculator</h3>
-        <p>Get a personalized light and melatonin timing plan based on your route and chronotype.</p>
-        <a href="https://zoe-sleep.com/tools/jetlag" target="_blank" class="btn btn-outline" style="font-size:13px; padding:8px 16px;">
-          Plan Your Trip
-        </a>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon">&#x1F4CA;</div>
-        <h3>Sleep Score Interpreter</h3>
-        <p>Paste your Oura, WHOOP, or Apple Watch data and get plain-language insights.</p>
-        <a href="https://zoe-sleep.com/tools/interpret" target="_blank" class="btn btn-outline" style="font-size:13px; padding:8px 16px;">
-          Analyze Data
-        </a>
+    <div class="tools-grid" style="grid-template-columns: 1fr;">
+      <div class="tool-card" style="display:flex; align-items:center; gap:24px;">
+        <div style="flex-shrink:0;">
+          <div class="tool-icon" style="font-size:36px;">&#x1F9D3;</div>
+        </div>
+        <div>
+          <h3>Sleep Age Simulator</h3>
+          <p style="margin-bottom:12px;">See how your sleep habits affect your biological age. Answer a few questions and compare your sleep metrics against population norms by age group. Free, no signup.</p>
+          <a href="https://cavalpinarello.github.io/sleep-age-simulator/" target="_blank" class="btn btn-primary" style="font-size:13px; padding:10px 20px;">
+            Try It Free
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -760,7 +742,7 @@
         </div>
         <div class="contact-item">
           <span class="icon">&#x1F3E5;</span>
-          Stanford Sleep Medicine (affiliated)
+          Researcher at Stanford School of Medicine
         </div>
         <div style="margin-top:20px; padding:16px; background:var(--bg); border:1px solid var(--border); border-radius:8px;">
           <div style="font-size:13px; font-weight:600; color:var(--text); margin-bottom:6px;">What to expect</div>
@@ -774,7 +756,7 @@
 
       <div class="contact-form-box">
         <h3>Send a Message</h3>
-        <form id="contactForm" action="https://formspree.io/f/xpwzqkbj" method="POST">
+        <form id="contactForm" action="https://formspree.io/f/2959431516398026225" method="POST">
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required placeholder="Your name">
