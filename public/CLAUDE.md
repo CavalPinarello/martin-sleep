@@ -14,6 +14,7 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #4713 | 6:39 PM | 🟣 | Website redesign with longevity/performance positioning and portrait photo layout | ~843 |
 | #4711 | 6:37 PM | ✅ | Updated consultation availability locations in contact section | ~311 |
 | #4707 | 6:35 PM | 🔴 | Fixed photo size and contact form configuration with Formspree email endpoint | ~273 |
 | #4704 | 6:34 PM | ✅ | Increased hero headshot size from 240px to 320px for enhanced visibility | ~359 |
