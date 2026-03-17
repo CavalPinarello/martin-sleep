@@ -131,15 +131,27 @@
   }
   .hero-photo {
     flex-shrink: 0;
+    position: relative;
   }
   .hero-photo img {
-    width: 320px;
-    height: 320px;
-    border-radius: 50%;
+    width: 340px;
+    height: 440px;
+    border-radius: 16px;
     object-fit: cover;
-    object-position: center 15%;
-    border: 3px solid var(--border);
-    box-shadow: 0 0 40px rgba(140,21,21,0.1);
+    object-position: center 10%;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(140,21,21,0.08);
+  }
+  .hero-photo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    border-radius: 0 0 16px 16px;
+    background: linear-gradient(to top, var(--bg), transparent);
+    pointer-events: none;
   }
   .hero-text .label {
     font-size: 12px;
@@ -519,7 +531,8 @@
       gap: 24px;
       padding-top: 100px;
     }
-    .hero-photo img { width: 220px; height: 220px; }
+    .hero-photo img { width: 260px; height: 340px; }
+    .hero-photo { order: -1; }
     .hero-text p { margin: 0 auto 24px; }
     .hero-buttons { justify-content: center; }
     .nav-links .hide-mobile { display: none; }
@@ -558,14 +571,18 @@
       <img src="martin.jpeg" alt="Dr. Martin Kawalski" loading="eager">
     </div>
     <div class="hero-text">
-      <div class="label">Sleep & Circadian Medicine</div>
+      <div class="label">Sleep for Longevity & Performance</div>
       <h1>Dr. Martin Kawalski</h1>
       <div class="role">MD, PhD - Physician & Sleep Researcher</div>
       <p>
-        I help people understand and fix their sleep through precision circadian medicine.
-        As a researcher at Stanford School of Medicine and founder of Zoe Sleep,
-        I bring clinical science to personalized sleep interventions - from one-on-one
-        consultations to conference keynotes.
+        Sleep is the most powerful lever for longevity, healthspan, and cognitive performance
+        - yet most people have no idea how to use it. I help high performers and health-conscious
+        individuals fix their sleep through precision circadian medicine, turning wearable data
+        into protocols that actually work.
+      </p>
+      <p style="font-size:13px; color:var(--muted); margin-bottom:24px;">
+        Researcher at Stanford School of Medicine. Founder of Zoe Sleep. Available for
+        consultations, corporate programs, and keynote speaking.
       </p>
       <div class="hero-buttons">
         <a href="#contact" class="btn btn-primary">Book a Consultation</a>
@@ -732,7 +749,7 @@
     <div class="contact-grid">
       <div class="contact-info">
         <h3>Direct Contact</h3>
-        <p>I personally respond to every message. Consultations available in person (Basel/Zurich) or virtually worldwide.</p>
+        <p>I personally respond to every message. In-person consultations in the Bay Area and occasionally Vienna/Innsbruck, or virtually worldwide.</p>
         <div class="contact-item">
           <span class="icon">&#x1F4E7;</span>
           <a href="mailto:martin@zoe-sleep.com">martin@zoe-sleep.com</a>
@@ -799,7 +816,7 @@
     <p>
       <a href="mailto:martin@zoe-sleep.com">martin@zoe-sleep.com</a> &nbsp;&bull;&nbsp;
       <a href="https://zoe-sleep.com" target="_blank">zoe-sleep.com</a> &nbsp;&bull;&nbsp;
-      Stanford-affiliated
+      Sleep for Longevity & Performance
     </p>
     <p style="margin-top:6px;">&copy; 2026 Dr. Martin Kawalski. All rights reserved.</p>
   </div>
