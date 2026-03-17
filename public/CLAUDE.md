@@ -7,5 +7,7 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #4551 | 4:36 PM | 🔴 | Restructured project for Vercel static file serving compliance | ~451 |
+| #4550 | " | 🔄 | Reorganized website files into public directory structure for Vercel deployment | ~175 |
 | #4537 | 4:28 PM | 🟣 | Created personal sleep medicine website with aurora theme integrating Sleep Blueprint PDF | ~539 |
 </claude-mem-context>
