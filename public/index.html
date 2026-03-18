@@ -32,7 +32,7 @@
   /* ---- HERO ---- */
   .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
   .hero-bg{position:absolute;inset:0;z-index:0}
-  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:0.25;filter:blur(1px)}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:0.45}
   .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(12,17,32,0.85) 0%,rgba(12,17,32,0.6) 50%,rgba(12,17,32,0.9) 100%)}
   .hero-content{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:100px 32px 60px;display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:center}
   .hero-text .label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:var(--mint);margin-bottom:14px;display:flex;align-items:center;gap:8px}
@@ -83,6 +83,8 @@
   .card p{font-size:14px;color:var(--muted);line-height:1.65}
   .card-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:var(--mint);font-weight:600;font-size:14px;text-decoration:none;transition:gap .2s}
   .card-link:hover{gap:10px}
+  .card-img{width:100%;height:140px;object-fit:cover;border-radius:10px;margin-bottom:14px;opacity:0.8;transition:opacity .3s}
+  .card:hover .card-img{opacity:1}
 
   /* ---- RESOURCE CARDS ---- */
   .resource-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px;display:flex;gap:28px;align-items:flex-start;margin-bottom:16px;transition:border-color .2s}
@@ -227,20 +229,20 @@
     <div class="cards-3">
       <div class="card">
         <div class="card-top" style="background:linear-gradient(90deg,var(--cardinal),var(--cardinal-l))"></div>
-        <div class="icon">&#x1F9EC;</div>
+        <img src="wearable.png" alt="Wearable sleep tracking" class="card-img">
         <h3>Sleep Consultations</h3>
-        <p>Comprehensive assessment: chronotype profiling, wearable data analysis, and a personalized protocol covering light timing, supplements, temperature, and behavioral interventions.</p>
+        <p>Comprehensive assessment: chronotype profiling, wearable data analysis, and a personalized protocol. I've also co-built wearable hardware with Bode Miller, US Olympic alpine skiing champion, for sports safety and performance.</p>
         <a href="#contact" class="card-link">Book now <span>&rarr;</span></a>
       </div>
       <div class="card">
         <div class="card-top" style="background:linear-gradient(90deg,var(--gold),#E8A820)"></div>
-        <div class="icon">&#x1F52C;</div>
+        <img src="sardinia.png" alt="Sardinia Blue Zone research" class="card-img">
         <h3>Longevity Research</h3>
-        <p>Stanford IRB-approved research studying sleep and circadian rhythms in centenarians across Blue Zones - Sardinia and Okinawa. The link between sleep regularity and extreme longevity.</p>
+        <p>Stanford IRB-approved research studying sleep and circadian rhythms in centenarians across Blue Zones - Sardinia and Okinawa. Understanding why the world's longest-lived people sleep differently.</p>
       </div>
       <div class="card">
         <div class="card-top" style="background:linear-gradient(90deg,var(--lavender),var(--blue))"></div>
-        <div class="icon">&#x1F3A4;</div>
+        <img src="conference.png" alt="Conference speaking" class="card-img">
         <h3>Speaking & Workshops</h3>
         <p>Keynotes on sleep science for conferences, founder retreats, and corporate wellness. Evidence-based, engaging, and designed to change behavior - not just inform.</p>
         <a href="#speaker" class="card-link">Book as speaker <span>&rarr;</span></a>
