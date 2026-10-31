@@ -118,13 +118,13 @@ def lumos():
     import math
     o = [f'<circle cx="600" cy="330" r="120" fill="#1C140E" stroke="{AMB}" stroke-opacity=".6" stroke-width="2"/>',
          f'<circle cx="600" cy="330" r="34" fill="{AMB}"><animate attributeName="r" values="30;38;30" dur="4s" repeatCount="indefinite"/></circle>',
-         f'<text x="600" y="420" text-anchor="middle" fill="{INK}" font-size="26" font-weight="800" {FONT}>Lumos</text>']
+         f'<text x="600" y="420" text-anchor="middle" fill="{INK}" font-size="26" font-weight="800" {FONT}>Nuku</text>']
     for k, (a, b) in enumerate(parts):
         ang = -math.pi / 2 + k * math.pi / 3
         x, y = 600 + 400 * math.cos(ang), 330 + 250 * math.sin(ang)
         o.append(_arrow(round(600 + 130 * math.cos(ang)), round(330 + 130 * math.sin(ang)), round(x - 140 * math.cos(ang) * .2), round(y - 40 * math.sin(ang))))
         o.append(_box(round(x - 160), round(y - 45), 320, 96, a, b))
-    return f'<svg viewBox="0 0 1200 660" role="img" aria-label="What Lumos is made of: ears, eye, memory, a mind at home, body and night mode">{"".join(o)}</svg>'
+    return f'<svg viewBox="0 0 1200 660" role="img" aria-label="What Nuku is made of: ears, eye, memory, a mind at home, body and night mode">{"".join(o)}</svg>'
 
 
-SVG = {"sardinia": sardinia, "bluenotte_steps": bluenotte_steps, "tenzo": tenzo, "tenzo_brief": tenzo_brief, "bridge": bridge, "lumos": lumos}
+SVG = {"sardinia": sardinia, "bluenotte_steps": bluenotte_steps, "tenzo": tenzo, "tenzo_brief": tenzo_brief, "bridge": bridge, "nuku": lumos}

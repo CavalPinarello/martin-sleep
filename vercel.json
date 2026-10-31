@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/work/lumos", "destination": "/work/nuku/", "permanent": true },
+    { "source": "/work/lumos/", "destination": "/work/nuku/", "permanent": true }
+  ]
+}

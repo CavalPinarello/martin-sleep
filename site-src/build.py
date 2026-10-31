@@ -14,7 +14,7 @@ ROOT = os.path.join(os.path.dirname(__file__), "..", "public")
 E = html.escape
 BY = {p["slug"]: p for p in P}
 ORDER = [p["slug"] for c in CATS for p in P if p["cat"] == c[0]]
-V = "10"
+V = "12"
 
 # small inline icons for the side rail and the phone tab bar
 IC = {
@@ -37,14 +37,14 @@ HEAD = """<!DOCTYPE html>
 <link rel="stylesheet" href="/assets/site.css?v={v}">
 <script>document.documentElement.classList.remove('no-js')</script>
 </head><body>
-<canvas id="fluid" aria-hidden="true"></canvas>
+<canvas id="fluid" aria-hidden="true"></canvas><canvas id="signals" aria-hidden="true"></canvas>
 <a class="me" href="/">Martin Kawalski</a>
 <nav class="bar" aria-label="Sections">{links}</nav>
 """
 
 FOOT = """<footer class="contact" id="contact"><div class="cat">Contact</div><h2>Write to me</h2>
 <p><a href="mailto:martin@zoe-sleep.com">martin@zoe-sleep.com</a></p><p><a href="https://www.linkedin.com/in/martinkawalski">LinkedIn</a> &nbsp;·&nbsp; <a href="https://profiles.stanford.edu/martin-kawalski">Stanford profile</a></p></footer>
-<script src="/assets/github.js?v={v}"></script><script src="/assets/site.js?v={v}" defer></script>
+<script src="/assets/github.js?v={v}"></script><script src="/assets/site.js?v={v}" defer></script><script src="/assets/signals.js?v={v}" defer></script>
 </body></html>"""
 
 
@@ -118,7 +118,7 @@ def fig(src, cap, k, n):
 
 def index():
     o = [head(cls="reel", title="Martin Kawalski, MD, PhD · A doctor who builds things",
-              desc="Martin Kawalski, MD, PhD. A doctor who builds things: Lumos, Snowcookie, Slumber AI, FirstLight, and sleep research at Stanford.",
+              desc="Martin Kawalski, MD, PhD. A doctor who builds things: Nuku, Snowcookie, Slumber AI, FirstLight, and sleep research at Stanford.",
               og="img/lumos_next.jpg")]
     o.append(f"""<section class="panel hero" id="top">
   <div class="hero-photo">{img("martin.jpeg", "(max-width: 820px) 100vw, 50vw", "Martin Kawalski", eager=True)}</div>
@@ -157,7 +157,7 @@ def work(p):
     prv, nxt = BY[ORDER[i - 1]], BY[ORDER[(i + 1) % len(ORDER)]]
     catname = dict((c[0], c[1]) for c in CATS)[p["cat"]]
     og = p["media"][1] if p["media"][0] in ("photo", "screens") else "img/lumos_next.jpg"
-    o = [head(cls="work", title=f"{p['title']} · Martin Kawalski, MD, PhD", desc=p["line"], og=og)]
+    o = [head(cls="work m-" + {"hardware": "hw", "software": "sw", "research": "sl"}[p["cat"]], title=f"{p['title']} · Martin Kawalski, MD, PhD", desc=p["line"], og=og)]
     links = []
     if p.get("link"):
         links.append(f'<a class="pill" href="{p["link"][0]}">{E(p["link"][1])}</a>')

@@ -27,22 +27,22 @@ CATS = [
 
 # media kinds: ("photo", src, object-position) | ("screens", desk_src, phone_src or None) | ("svg", key)
 P = [
-    dict(slug="lumos", cat="hardware", title="Lumos", kick="Robotics · building now",
-         line="I'm building Lumos, a social robot. It starts with loneliness, as a companion for older adults who live alone.",
-         lead=("I'm building Lumos, a social robot. It starts with loneliness, as a companion for older adults who live alone, "
+    dict(slug="nuku", cat="hardware", title="Nuku", kick="Robotics · building now",
+         line="I'm building Nuku, a social robot. It starts with loneliness, as a companion for older adults who live alone.",
+         lead=("I'm building Nuku, a social robot. It starts with loneliness, as a companion for older adults who live alone, "
                "especially at night. Later the same robot can sit with a seven-year-old over homework, or keep a meeting on track. Loneliness comes first."),
          media=("photo", "img/lumos_next.jpg", "60% 50%"), cap="Design render",
          built=["I built the prototype myself, by hand, at home in California, and I talk to it every day. It holds a conversation, remembers what you told it last week, and knows whose face and voice it's dealing with.",
-                "It also moves while it talks. It turns toward whoever is speaking, leans in when you tell it something, and goes still when you go quiet. A voice in a box can't do that, and it's what makes Lumos feel like someone in the room.",
+                "It also moves while it talks. It turns toward whoever is speaking, leans in when you tell it something, and goes still when you go quiet. A voice in a box can't do that, and it's what makes Nuku feel like someone in the room.",
                 "The pictures on this page are design renders of the version I'm working toward."],
          how=[("Ears", "A microphone array hears who is talking and from which side, so it turns to the right person."),
               ("Eye", "A camera recognises the people it lives with and greets them by name."),
               ("Memory", "It keeps a long-term memory of a person's life: names, plans, what worried them on Tuesday."),
-              ("A mind at home", "A small model fine-tuned for Lumos runs in the house. Harder questions go to larger models, and the robot doesn't go dead when a server does."),
+              ("A mind at home", "A small model fine-tuned for Nuku runs in the house. Harder questions go to larger models, and the robot doesn't go dead when a server does."),
               ("Body", "Every reply comes with a movement, a turn or a nod or a lean, and at night a slow settle."),
               ("Night", "After dark it drops to a whisper with no light, for the hours when there's nobody else to talk to.")],
-         gallery=[("svg:lumos", "What Lumos is made of."),
-                  ("img/work/lumos/hello.jpg", "Design render. Lumos turns toward a visitor."),
+         gallery=[("svg:nuku", "What Nuku is made of."),
+                  ("img/work/lumos/hello.jpg", "Design render. Nuku turns toward a visitor."),
                   ("img/work/lumos/morning.jpg", "Design render. Morning."),
                   ("img/work/lumos/walking.jpg", "Storyboard. The point is to get people out the door.")],
          nexth="What's next",
@@ -64,7 +64,7 @@ P = [
                   ("img/work/snowcookie/app.jpg", "The app."),
                   ("img/work/snowcookie/skier.jpg", "Testing on snow.")],
          nexth="What it taught me",
-         next="Sensors on real bodies, in the cold, used by people who will never read a manual. Everything I build now starts from that, Lumos included."),
+         next="Sensors on real bodies, in the cold, used by people who will never read a manual. Everything I build now starts from that, Nuku included."),
 
     dict(slug="slumber-ai", cat="software", title="Slumber AI", kick="Clinical AI",
          line="An assistant that answers sleep surgery patients' questions before their operation, in their own language.",
@@ -79,7 +79,7 @@ P = [
                   ("img/slumber_m.jpg", "On a phone.")],
          link=("https://slumber-ai.vercel.app", "slumber-ai.vercel.app"),
          nexth="What it taught me",
-         next="Answer the question a person actually asked, in their words. Lumos does the same thing out loud."),
+         next="Answer the question a person actually asked, in their words. Nuku does the same thing out loud."),
 
     dict(slug="firstlight", cat="software", title="FirstLight", kick="Apps",
          line="An iPhone and web app that measures how sharp you are each morning, against your own sleep.",
@@ -144,7 +144,7 @@ P = [
          builth="How I work there",
          built=["Sardinia has one of the highest densities of centenarians on Earth, with almost as many men as women among them, which is rare. Most of what anyone knows about how they sleep comes from questionnaires.",
                 "BlueNotte measures it. With our partners at the hospital in Alghero, we visit people at home and record their nights with sensors they barely notice, a ring or a watch and a monitor under the mattress, then ask them about their days. Stanford does the design and the analysis.",
-                "In Sardinia I see first-hand how rarely the oldest people are left alone. Lumos started there."],
+                "In Sardinia I see first-hand how rarely the oldest people are left alone. Nuku started there."],
          how=[("Visit", "At home, in the village, with the local hospital team."),
               ("Sensors", "A ring or watch, and a monitor under the mattress."),
               ("Interview", "Days, meals, naps and the people around them."),
