@@ -1,622 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr. Martin Kawalski - Speaker & Educator on Sleep Science</title>
-<meta name="description" content="Dr. Martin Kawalski, MD, PhD - Stanford sleep medicine researcher. Public speaker and educator on sleep, aging, wearables, and circadian medicine. Currently teaching the R42 Institute course on Sleep and Aging.">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Martin Kawalski, MD, PhD · Physician, founder, inventor</title>
+<meta name="description" content="Martin Kawalski, MD, PhD. At Stanford he investigates sleep and longevity, and he builds things people can use: Lumos, Snowcookie, Slumber AI, FirstLight.">
+<meta property="og:title" content="Martin Kawalski, MD, PhD"><meta property="og:image" content="https://martinkawalski.com/img/lumos_next.jpg">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F319;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@500;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-  :root{
-    --bg:#0C1120;--surface:#131A2B;--surface2:#1A2236;--border:#1E2D45;
-    --border-h:#2A3F5F;--text:#F0F4F8;--text2:#CBD5E1;--muted:#64748B;
-    --cardinal:#8C1515;--cardinal-l:#B83A3A;--mint:#2DD4A8;--blue:#4A6CF7;
-    --gold:#F5C842;--lavender:#C4B5FD;
-  }
-  html{scroll-behavior:smooth}
-  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text2);font-size:17px;line-height:1.7;letter-spacing:0.01em}
+:root{--bg:#120C08;--bg2:#1C140E;--ink:#F3EADC;--soft:#C9BBA7;--dim:#8E7F6C;--amber:#F2B866;--line:#3A2C20;
+--serif:'Domine',Georgia,serif;--sans:'Nunito Sans','Helvetica Neue',Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:19px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(242,184,102,.4)}
+a:hover{border-color:var(--amber)}
+.hero{position:relative;min-height:min(100vh,940px);display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.hero .t{padding:min(12vh,108px) 6vw min(8vh,72px);display:flex;flex-direction:column;justify-content:flex-end;gap:26px;position:relative;z-index:2}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(60px,9vw,150px);line-height:.92;letter-spacing:-.02em}
+.hero .cred{font-family:var(--serif);font-size:clamp(24px,2.2vw,34px);color:var(--amber);margin-top:-6px}
+.hero .kick{font-size:15px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--amber)}
+.hero p{font-size:clamp(20px,1.7vw,26px);line-height:1.45;color:var(--soft);max-width:30ch}
+.hero .ph{position:relative}
+.hero .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.hero .ph:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 0%,rgba(18,12,8,0) 30%)}
+.cap{position:absolute;right:16px;bottom:14px;font-size:13px;color:rgba(243,234,220,.75);background:rgba(18,12,8,.55);padding:4px 10px;border-radius:999px;z-index:3}
+.work{position:relative;display:grid;grid-template-columns:1fr 1fr;min-height:min(86vh,760px);border-top:1px solid var(--line)}
+.work.flip .ph{order:2}
+.work .ph{position:relative;overflow:hidden;background:#000}
+.work .ph>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.work .duo{background:var(--bg2)}
+.work .duo>img.desk{position:absolute;inset:auto;left:7%;top:12%;width:78%;height:auto;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.6);border:1px solid #2c2219}
+.work .duo>img.phone{position:absolute;inset:auto;right:6%;bottom:8%;width:24%;height:auto;border-radius:22px;border:6px solid #0b0806;box-shadow:0 30px 70px rgba(0,0,0,.7)}
+.work .solo{background:var(--bg2);display:flex;align-items:center;justify-content:center;padding:6vw}
+.work .solo>img{position:static;width:100%;height:auto;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.6);border:1px solid #2c2219}
+.work .t{padding:min(10vh,90px) 6vw;display:flex;flex-direction:column;justify-content:center;gap:22px}
+.n{font-family:var(--serif);font-size:20px;color:var(--dim)}
+.cat{font-size:14px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--amber)}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(46px,5.6vw,92px);line-height:1;letter-spacing:-.015em}
+.what{font-size:clamp(20px,1.7vw,26px);line-height:1.45;color:var(--ink);max-width:32ch}
+.proof{font-size:18px;color:var(--soft);max-width:38ch}
+.go{font-size:18px;font-weight:700;align-self:flex-start}
+.type{border-top:1px solid var(--line);padding:min(12vh,108px) 6vw;display:grid;grid-template-columns:repeat(3,1fr);gap:6vw}
+.type .it{display:flex;flex-direction:column;gap:14px}
+.type h3{font-family:var(--serif);font-size:clamp(38px,3.6vw,60px);line-height:1}
+.type .what{font-size:21px;max-width:30ch}
+.end{border-top:1px solid var(--line);padding:min(14vh,126px) 6vw min(12vh,108px);display:flex;flex-direction:column;gap:24px;max-width:1100px}
+.end h2{font-size:clamp(36px,4vw,60px)}
+.end p{font-size:22px;color:var(--soft);max-width:48ch}
+@media(max-width:820px){
+  .hero,.work{grid-template-columns:1fr}
+  .hero .ph{min-height:min(62vh,560px);order:-1}
+  .hero .ph:after{background:linear-gradient(0deg,var(--bg) 0%,rgba(18,12,8,0) 40%)}
+  .work .ph{min-height:min(56vh,440px)}.work.flip .ph{order:0}
+  .work .solo{min-height:auto}
+  .type{grid-template-columns:1fr;gap:56px}
+}
 
-  /* ---- NAV ---- */
-  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(12,17,32,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
-  .nav-inner{max-width:1080px;margin:0 auto;padding:14px 32px;display:flex;justify-content:space-between;align-items:center}
-  .nav-brand{font-weight:800;font-size:16px;color:var(--text);letter-spacing:-0.3px}
-  .nav-brand span{color:var(--cardinal-l)}
-  .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
-  .nav-links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
-  .nav-links a:hover{color:var(--text)}
-  .btn-nav{background:var(--cardinal);color:white!important;padding:9px 20px;border-radius:8px;font-weight:600!important;font-size:13px!important;transition:background .2s}
-  .btn-nav:hover{background:var(--cardinal-l)}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px 6vw;background:linear-gradient(180deg,rgba(18,12,8,.85),rgba(18,12,8,0))}
+nav .me{font-family:var(--serif);font-weight:700;font-size:20px;color:var(--ink);border:0}
+nav .links{display:flex;gap:28px}
+nav .links a{color:var(--soft);border:0;font-size:16px;font-weight:700}
+nav .links a:hover{color:var(--amber)}
+.hero .ph img.me{object-position:50% 20%}
+.sechead{border-top:1px solid var(--line);padding:min(12vh,108px) 6vw 0;display:flex;flex-direction:column;gap:16px}
+.sechead h2{font-size:clamp(40px,4.4vw,72px)}
+.sechead p{font-size:21px;color:var(--soft);max-width:52ch}
+.talks{padding:56px 6vw min(12vh,108px);display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:4vw;align-items:start}
+.talk{display:flex;flex-direction:column;gap:14px}
+.talk img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;border:1px solid #2c2219}
+.talk h3{font-family:var(--serif);font-size:clamp(28px,2.4vw,40px);line-height:1.1}
+.talk .idea{font-size:20px;line-height:1.45;color:var(--ink)}
+.talk .where{font-size:16px;color:var(--dim)}
+.talk .gos{display:flex;gap:20px;font-size:17px;font-weight:700}
+.contact{border-top:1px solid var(--line);padding:min(12vh,108px) 6vw;display:flex;flex-direction:column;gap:18px}
+.contact h2{font-size:clamp(36px,4vw,60px)}
+.contact p{font-size:22px;color:var(--soft)}
+@media(max-width:820px){nav .links{gap:16px}nav .links a{font-size:14px}.talks{grid-template-columns:1fr;gap:56px}}
+</style></head><body>
+<nav><a class="me" href="#">Martin Kawalski</a><div class="links"><a href="#work">Work</a><a href="#talks">Talks</a><a href="#research">Research</a><a href="#contact">Contact</a></div></nav>
 
-  /* ---- HERO ---- */
-  .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
-  .hero-bg{position:absolute;inset:0;z-index:0}
-  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:0.45}
-  .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(12,17,32,0.85) 0%,rgba(12,17,32,0.6) 50%,rgba(12,17,32,0.9) 100%)}
-  .hero-content{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:100px 32px 60px;display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:center}
-  .hero-text .label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:var(--mint);margin-bottom:14px;display:flex;align-items:center;gap:8px}
-  .hero-text .label::before{content:'';width:24px;height:1px;background:var(--mint)}
-  .hero-text h1{font-size:52px;font-weight:900;color:var(--text);letter-spacing:-2px;line-height:1.05;margin-bottom:10px}
-  .hero-text .role{font-size:18px;color:var(--muted);margin-bottom:20px;font-weight:400}
-  .hero-text .role a{color:var(--cardinal-l);text-decoration:none;font-weight:500}
-  .hero-text .role a:hover{text-decoration:underline}
-  .hero-text p{font-size:17px;color:var(--text2);max-width:540px;margin-bottom:12px;line-height:1.7}
-  .hero-text p.small{font-size:14px;color:var(--muted);margin-bottom:28px}
-  .hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
-  .hero-photo{position:relative}
-  .hero-photo img{width:100%;max-width:380px;height:480px;object-fit:cover;object-position:center 10%;border-radius:16px;border:1px solid rgba(255,255,255,0.06);box-shadow:0 30px 80px rgba(0,0,0,0.5)}
-  .hero-photo::after{content:'';position:absolute;bottom:0;left:0;right:0;height:100px;border-radius:0 0 16px 16px;background:linear-gradient(to top,var(--bg),transparent);pointer-events:none}
 
-  /* ---- BUTTONS ---- */
-  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;transition:all .2s;border:none;cursor:pointer}
-  .btn-primary{background:var(--cardinal);color:white}
-  .btn-primary:hover{background:var(--cardinal-l);transform:translateY(-1px);box-shadow:0 6px 20px rgba(140,21,21,0.3)}
-  .btn-outline{background:transparent;color:var(--text);border:1px solid var(--border)}
-  .btn-outline:hover{border-color:var(--border-h);background:var(--surface)}
-  .btn-mint{background:var(--mint);color:var(--bg);font-weight:700}
-  .btn-mint:hover{background:#38E8B8}
-
-  /* ---- CREDIBILITY BAR ---- */
-  .cred-bar{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:24px 0;background:var(--surface)}
-  .cred-inner{max-width:1080px;margin:0 auto;padding:0 32px;display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
-  .cred-item{text-align:center}
-  .cred-item .cv{font-size:28px;font-weight:800;color:var(--text);letter-spacing:-0.5px}
-  .cred-item .cl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:2px}
-
-  /* ---- SECTIONS ---- */
-  .container{max-width:1080px;margin:0 auto;padding:0 32px}
-  section{padding:80px 0}
-  .section-divider{border:none;border-top:1px solid var(--border);margin:0}
-  .section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:var(--cardinal-l);margin-bottom:10px;display:flex;align-items:center;gap:8px}
-  .section-label::before{content:'';width:24px;height:1px;background:var(--cardinal-l)}
-  .section-title{font-size:32px;font-weight:800;letter-spacing:-0.8px;margin-bottom:10px;color:var(--text)}
-  .section-sub{font-size:16px;color:var(--muted);max-width:580px;margin-bottom:40px;line-height:1.7}
-
-  /* ---- CARDS GRID ---- */
-  .cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px;transition:all .3s;position:relative;overflow:hidden}
-  .card:hover{border-color:var(--border-h);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,0.25)}
-  .card-top{height:3px;border-radius:14px 14px 0 0;position:absolute;top:0;left:0;right:0}
-  .card .icon{font-size:28px;margin-bottom:12px}
-  .card h3{font-size:17px;font-weight:700;color:var(--text);margin-bottom:6px}
-  .card p{font-size:14px;color:var(--muted);line-height:1.65}
-  .card-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:var(--mint);font-weight:600;font-size:14px;text-decoration:none;transition:gap .2s}
-  .card-link:hover{gap:10px}
-  .card-img{width:100%;height:140px;object-fit:cover;border-radius:10px;margin-bottom:14px;opacity:0.8;transition:opacity .3s}
-  .card:hover .card-img{opacity:1}
-
-  /* ---- RESOURCE CARDS ---- */
-  .resource-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px;display:flex;gap:28px;align-items:flex-start;margin-bottom:16px;transition:border-color .2s}
-  .resource-card:hover{border-color:var(--border-h)}
-  .resource-icon{flex-shrink:0;width:60px;height:60px;background:var(--surface2);border:1px solid var(--border);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px}
-  .resource-info h3{font-size:18px;font-weight:700;color:var(--text);margin-bottom:5px}
-  .resource-info p{font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:14px}
-  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
-  .tag{font-size:11px;font-weight:500;padding:4px 12px;border-radius:14px;background:rgba(45,212,168,0.08);color:var(--mint);border:1px solid rgba(45,212,168,0.12)}
-
-  /* ---- TOOL CARD ---- */
-  .tool-featured{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px;display:flex;gap:28px;align-items:center}
-  .tool-featured:hover{border-color:var(--border-h)}
-
-  /* ---- ZOE SECTION ---- */
-  .zoe-section{background:linear-gradient(180deg,var(--bg) 0%,rgba(45,212,168,0.03) 50%,var(--bg) 100%)}
-  .zoe-card{display:grid;grid-template-columns:1fr 200px;gap:48px;align-items:center}
-  .zoe-features{list-style:none;margin:20px 0}
-  .zoe-features li{font-size:15px;color:var(--text2);padding:5px 0;display:flex;align-items:flex-start;gap:10px}
-  .zoe-features .ck{color:var(--mint);flex-shrink:0;font-size:16px}
-  .zoe-features b{color:var(--text)}
-  .zoe-badge{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:5px 14px;border-radius:14px;background:rgba(45,212,168,0.1);color:var(--mint);border:1px solid rgba(45,212,168,0.15);margin-bottom:14px}
-  .phone{width:180px;height:360px;background:var(--bg);border:2px solid var(--border);border-radius:24px;padding:28px 14px 14px;position:relative;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.4)}
-  .phone::before{content:'';position:absolute;top:10px;left:50%;transform:translateX(-50%);width:50px;height:4px;background:var(--border);border-radius:2px}
-  .phone .an{font-size:16px;font-weight:800;color:var(--mint);margin:14px 0 4px}
-  .phone .at{font-size:9px;color:var(--muted);margin-bottom:16px}
-  .metrics{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-  .metric{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 4px}
-  .metric .v{font-size:16px;font-weight:800}
-  .metric .l{font-size:7px;color:var(--muted);text-transform:uppercase;letter-spacing:.3px}
-
-  /* ---- SPEAKER with background ---- */
-  .speaker-section{position:relative;overflow:hidden}
-  .speaker-bg{position:absolute;inset:0;z-index:0}
-  .speaker-bg img{width:100%;height:100%;object-fit:cover;opacity:0.1}
-  .speaker-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,var(--bg),rgba(12,17,32,0.7),var(--bg))}
-  .speaker-content{position:relative;z-index:1}
-  .speaker-card{background:rgba(19,26,43,0.8);backdrop-filter:blur(10px);border:1px solid var(--border);border-radius:14px;padding:36px;text-align:center;max-width:700px;margin:0 auto}
-  .speaker-topics{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:18px 0 24px}
-  .speaker-topic{font-size:13px;padding:6px 16px;border-radius:8px;background:rgba(196,181,253,0.06);border:1px solid rgba(196,181,253,0.12);color:var(--lavender)}
-
-  /* ---- CONTACT ---- */
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
-  .contact-box{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px}
-  .contact-box h3{font-size:20px;font-weight:700;color:var(--text);margin-bottom:14px}
-  .contact-box p{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:18px}
-  .ci{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted);margin-bottom:10px}
-  .ci .ico{font-size:18px}
-  .ci a{color:var(--mint);text-decoration:none}
-  .ci a:hover{text-decoration:underline}
-  .expect{margin-top:20px;padding:18px;background:var(--bg);border:1px solid var(--border);border-radius:10px}
-  .expect .et{font-size:13px;font-weight:600;color:var(--text);margin-bottom:8px}
-  .expect li{list-style:none;font-size:13px;color:var(--muted);margin-bottom:4px}
-  .form-group{margin-bottom:16px}
-  .form-group label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:5px}
-  .form-group input,.form-group textarea,.form-group select{width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:15px;font-family:inherit;outline:none;transition:border-color .2s}
-  .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--cardinal-l)}
-  .form-group textarea{resize:vertical;min-height:100px}
-
-  /* ---- FOOTER ---- */
-  footer{padding:36px 0;border-top:1px solid var(--border);text-align:center;font-size:13px;color:var(--muted)}
-  footer a{color:var(--mint);text-decoration:none}
-
-  /* ---- RESPONSIVE ---- */
-  @media(max-width:768px){
-    .hero-content{grid-template-columns:1fr;gap:32px;padding-top:90px}
-    .hero-photo{order:-1;text-align:center}
-    .hero-photo img{max-width:280px;height:360px}
-    .hero-text{text-align:center}
-    .hero-text .label{justify-content:center}
-    .hero-text p{margin-left:auto;margin-right:auto}
-    .hero-buttons{justify-content:center}
-    .hero-text h1{font-size:36px}
-    .nav-links .hm{display:none}
-    .cards-3{grid-template-columns:1fr}
-    .zoe-card{grid-template-columns:1fr}
-    .phone{margin:0 auto}
-    .contact-grid{grid-template-columns:1fr}
-    .resource-card{flex-direction:column}
-    .cred-inner{gap:24px}
-    .cred-item .cv{font-size:22px}
-    .section-title{font-size:26px}
-  }
-</style>
-</head>
-<body>
-
-<nav>
-  <div class="nav-inner">
-    <div class="nav-brand">Dr. <span>Kawalski</span></div>
-    <ul class="nav-links">
-      <li class="hm"><a href="#work">What I Do</a></li>
-      <li class="hm"><a href="#wearables">Wearables</a></li>
-      <li class="hm"><a href="#teaching">Teaching</a></li>
-      <li class="hm"><a href="#speaker">Speaking</a></li>
-      <li class="hm"><a href="#resources">Resources</a></li>
-      <li><a href="#contact" class="btn-nav">Book Me</a></li>
-    </ul>
+<section class="hero">
+  <div class="t">
+    <div class="kick">Physician · Founder · Inventor</div>
+    <h1>Martin<br>Kawalski</h1>
+    <div class="cred">MD, PhD</div>
+    <p>At Stanford I investigate sleep and longevity. I turn what I learn into things people can use, and right now I'm building Lumos.</p>
   </div>
-</nav>
+  <div class="ph"><img class="me" src="martin.jpeg" alt="Martin Kawalski"></div>
+</section>
 
-<!-- HERO -->
-<section class="hero" id="about">
-  <div class="hero-bg"><img src="aurora-bg.png" alt="" loading="eager"></div>
-  <div class="hero-content">
-    <div class="hero-text">
-      <div class="label">Public Speaking & Teaching</div>
-      <h1>Martin<br>Kawalski</h1>
-      <div class="role">MD, PhD - Physician, Sleep Researcher & Educator</div>
-      <p>
-        I teach and speak about the science of sleep, circadian biology, wearable technology,
-        and longevity. From university courses and online cohorts to conference keynotes and
-        corporate workshops, my goal is to make sleep science rigorous, practical, and actionable.
-      </p>
-      <p class="small">
-        <a href="https://profiles.stanford.edu/martin-kawalski" target="_blank" style="color:var(--text2);text-decoration:none;border-bottom:1px solid var(--muted)">Researcher at Stanford School of Medicine</a>.
-        Currently teaching a 5-module course with R42 Institute on Sleep and Aging, and available
-        for keynotes, workshops, and one-on-one sleep optimization consultations.
-      </p>
-      <div class="hero-buttons">
-        <a href="#contact" class="btn btn-primary">Book Me as a Speaker</a>
-        <a href="#teaching" class="btn btn-outline">See What I'm Teaching</a>
-      </div>
-    </div>
-    <div class="hero-photo">
-      <img src="martin.jpeg" alt="Dr. Martin Kawalski" loading="eager">
-    </div>
+<section class="sechead" id="work"><div class="cat">Things I've built</div><h2>Work</h2></section>
+<section class="work" style="border-top:0;margin-top:48px">
+  <div class="ph"><img src="img/lumos_next.jpg" alt="Lumos, a soft knit companion robot with one warm eye and glowing dots along its arm" style="object-position:60% 50%"><span class="cap">Lumos, design</span></div>
+  <div class="t">
+    <div class="n">01</div><div class="cat">Robotics · building now</div>
+    <h2>Lumos</h2>
+    <p class="what">I'm building Lumos, a companion robot for older adults who live alone. It talks, remembers your life, and nudges you back toward your people.</p>
+    <p class="proof">Yoichiro Hara and I are building it ourselves, from the software and our own fine-tuned model to the body. The working prototype talks with us every day.</p>
   </div>
 </section>
 
-<hr class="section-divider">
-
-<!-- WHAT I DO -->
-<section id="work">
-  <div class="container">
-    <div class="section-label">What I Do</div>
-    <h2 class="section-title">Sleep Science, Translated</h2>
-    <p class="section-sub">
-      I turn decades of sleep and circadian research into clear, practical teaching for
-      students, professionals, clinicians, and curious adults who want to understand
-      their own biology.
-    </p>
-    <div class="cards-3">
-      <div class="card">
-        <div class="card-top" style="background:linear-gradient(90deg,var(--lavender),var(--blue))"></div>
-        <img src="conference.png" alt="Conference speaking" class="card-img">
-        <h3>Keynote Speaking</h3>
-        <p>Evidence-based talks on sleep, circadian medicine, wearables, and longevity for conferences, corporate retreats, medical education, and wellness events. Tailored to your audience, with actionable takeaways.</p>
-        <a href="#speaker" class="card-link">Book as speaker <span>&rarr;</span></a>
-      </div>
-      <div class="card">
-        <div class="card-top" style="background:linear-gradient(90deg,var(--mint),var(--blue))"></div>
-        <img src="wearable.png" alt="Teaching sleep and wearables" class="card-img">
-        <h3>Teaching & Courses</h3>
-        <p>Multi-week online cohorts and university-style modules on sleep architecture, wearable data analysis, circadian biology, longevity, and evidence-based interventions. Currently teaching a 5-module course with R42 Institute.</p>
-        <a href="#teaching" class="card-link">What I'm teaching <span>&rarr;</span></a>
-      </div>
-      <div class="card">
-        <div class="card-top" style="background:linear-gradient(90deg,var(--cardinal),var(--cardinal-l))"></div>
-        <img src="sardinia.png" alt="Sleep optimization consultation" class="card-img">
-        <h3>Sleep Optimization Consultation</h3>
-        <p>One-on-one precision assessment: chronotype profiling, wearable data analysis, and a personalized protocol covering light timing, temperature, supplements, and behavioral interventions. Also available for teams and corporate programs.</p>
-        <a href="#contact" class="card-link">Book now <span>&rarr;</span></a>
-      </div>
-    </div>
+<section class="work flip">
+  <div class="ph"><img src="img/snowcookie.jpg" alt="A skier carving a turn, with sensor positions marked on her body" style="object-position:28% 30%"><span class="cap">Snowcookie</span></div>
+  <div class="t">
+    <div class="n">02</div><div class="cat">Hardware</div>
+    <h2>Snowcookie</h2>
+    <p class="what">A ski wearable that reads your body mechanics and measures fatigue, to prevent injuries on snow. I invented it with Olympic champion Bode Miller.</p>
+    <p class="proof">Finalist in Intel's Make It Wearable challenge. Taken from an idea to a product in stores, including in Japan.</p>
   </div>
 </section>
 
-<hr class="section-divider">
-
-<!-- WEARABLE DATA INTERPRETATION -->
-<section id="wearables">
-  <div class="container">
-    <div class="section-label">Wearable Data, Decoded</div>
-    <h2 class="section-title">Make Your Oura, Apple Watch, WHOOP, or Garmin Actually Useful</h2>
-    <p class="section-sub">
-      Your wearable spits out dozens of numbers every morning. Most people glance at a single
-      "sleep score" and miss the signals that actually matter. In a consultation or course, I
-      walk you through your own data and teach you which digital biomarkers deserve your
-      attention, which ones are noise, and which ones change your protocol.
-    </p>
-
-    <div class="cards-3">
-      <div class="card">
-        <div class="card-top" style="background:linear-gradient(90deg,var(--mint),var(--blue))"></div>
-        <div class="icon">&#x1F4AD;</div>
-        <h3>Sleep Stages (REM, Deep, Light)</h3>
-        <p>I'll show you how accurately your device actually classifies stages, what healthy ratios look like for your age, and why a "low deep sleep" night is usually not what it seems.</p>
-      </div>
-      <div class="card">
-        <div class="card-top" style="background:linear-gradient(90deg,var(--cardinal),var(--cardinal-l))"></div>
-        <div class="icon">&#x1F493;</div>
-        <h3>Heart Rate Variability (HRV)</h3>
-        <p>The single most misread metric on any wearable. We'll look at your 30-day trend, not the daily number, and tie it to sleep, stress, alcohol, and training load.</p>
-      </div>
-      <div class="card">
-        <div class="card-top" style="background:linear-gradient(90deg,var(--gold),#E8A820)"></div>
-        <div class="icon">&#x1FAC0;</div>
-        <h3>Resting Heart Rate Trends</h3>
-        <p>A rising RHR over weeks is one of the earliest signals of overtraining, illness, or accumulating sleep debt. I'll teach you what your personal baseline looks like.</p>
-      </div>
-    </div>
-
-    <div class="cards-3" style="margin-top:16px;">
-      <div class="card">
-        <div class="card-top" style="background:linear-gradient(90deg,var(--lavender),var(--blue))"></div>
-        <div class="icon">&#x1F32C;&#xFE0F;</div>
-        <h3>Respiratory Rate</h3>
-        <p>A remarkably stable trait that shifts with illness, altitude, and alcohol before almost any other signal does. We'll identify your baseline and your early warning band.</p>
-      </div>
-      <div class="card">
-        <div class="card-top" style="background:linear-gradient(90deg,var(--mint),var(--gold))"></div>
-        <div class="icon">&#x1F321;&#xFE0F;</div>
-        <h3>Skin & Body Temperature</h3>
-        <p>Phase-tracks your circadian rhythm and flags cycle changes, jet lag, illness, and sleep-environment problems. We'll use it to time light, meals, and workouts.</p>
-      </div>
-      <div class="card">
-        <div class="card-top" style="background:linear-gradient(90deg,var(--blue),var(--cardinal-l))"></div>
-        <div class="icon">&#x1F4A8;</div>
-        <h3>SpO2 & Breathing Disturbances</h3>
-        <p>Most wearables now screen for nocturnal desaturations. I'll help you tell the difference between benign variation and patterns that warrant a formal sleep study.</p>
-      </div>
-    </div>
-
-    <div style="margin-top:32px;text-align:center;">
-      <a href="#contact" class="btn btn-primary">Book a Wearable Data Review</a>
-      <a href="#teaching" class="btn btn-outline" style="margin-left:8px;">Learn It in the Course</a>
-    </div>
+<section class="work">
+  <div class="ph duo"><img class="desk" src="img/slumber.jpg" alt="Slumber AI on a laptop"><img class="phone" src="img/slumber_m.jpg" alt="Slumber AI on a phone, with the intake form"></div>
+  <div class="t">
+    <div class="n">03</div><div class="cat">Clinical AI</div>
+    <h2>Slumber AI</h2>
+    <p class="what">An assistant that answers sleep surgery patients' questions before their operation, in their own language.</p>
+    <p class="proof">Tested by more than 40 sleep surgeons. Presented at AAO-HNSF 2025.</p>
+    <a class="go" href="https://slumber-ai.vercel.app">slumber-ai.vercel.app</a>
   </div>
 </section>
 
-<hr class="section-divider">
-
-<!-- CURRENTLY TEACHING -->
-<section id="teaching">
-  <div class="container">
-    <div class="section-label">Currently Teaching</div>
-    <h2 class="section-title">Sleep and Aging: Practical Strategies for Better Rest</h2>
-    <p class="section-sub">
-      A 5-module online course with R42 Institute examining sleep science through the lens
-      of wearable technology and longevity biology. Each session is 60 minutes of teaching
-      plus a hands-on workshop analyzing real sleep data.
-    </p>
-    <div class="cards-3">
-      <div class="card">
-        <div class="card-top" style="background:linear-gradient(90deg,var(--mint),var(--blue))"></div>
-        <div class="icon">&#x1F9E0;</div>
-        <h3>Module 1 &nbsp;/&nbsp; Apr 21</h3>
-        <p><b style="color:var(--text)">Sleep Architecture.</b> Sleep stages, age-related changes, and what your wearable is actually measuring.</p>
-      </div>
-      <div class="card">
-        <div class="card-top" style="background:linear-gradient(90deg,var(--blue),var(--lavender))"></div>
-        <div class="icon">&#x231A;</div>
-        <h3>Module 2 &nbsp;/&nbsp; Apr 28</h3>
-        <p><b style="color:var(--text)">Wearable Technology.</b> Device accuracy, validated metrics, and how to interpret Oura, Apple Watch, WHOOP, and Garmin data.</p>
-      </div>
-      <div class="card">
-        <div class="card-top" style="background:linear-gradient(90deg,var(--gold),#E8A820)"></div>
-        <div class="icon">&#x1F33F;</div>
-        <h3>Module 3 &nbsp;/&nbsp; May 5</h3>
-        <p><b style="color:var(--text)">Longevity & Centenarian Patterns.</b> What Blue Zones research tells us about sleep, circadian rhythms, and healthy aging.</p>
-      </div>
-    </div>
-    <div class="cards-3" style="margin-top:16px;">
-      <div class="card">
-        <div class="card-top" style="background:linear-gradient(90deg,var(--lavender),var(--blue))"></div>
-        <div class="icon">&#x1F4CA;</div>
-        <h3>Module 4 &nbsp;/&nbsp; May 12</h3>
-        <p><b style="color:var(--text)">Evidence-Based Interventions.</b> Light, temperature, supplements, and behavioral protocols that actually change your metrics.</p>
-      </div>
-      <div class="card">
-        <div class="card-top" style="background:linear-gradient(90deg,var(--mint),var(--gold))"></div>
-        <div class="icon">&#x1F319;</div>
-        <h3>Module 5 &nbsp;/&nbsp; May 19</h3>
-        <p><b style="color:var(--text)">Sleep Disorders & Optimization.</b> When wearable data signals something more, and when to seek clinical evaluation.</p>
-      </div>
-      <div class="card">
-        <div class="card-top" style="background:linear-gradient(90deg,var(--cardinal),var(--cardinal-l))"></div>
-        <div class="icon">&#x2709;&#xFE0F;</div>
-        <h3>Next Cohort</h3>
-        <p>Registration for the current cohort has closed. For notifications about the next cohort or custom corporate and university versions, get in touch.</p>
-        <a href="mailto:martin@zoe-sleep.com?subject=Sleep%20and%20Aging%20Course%20-%20Next%20Cohort" class="card-link">Join the waitlist <span>&rarr;</span></a>
-      </div>
-    </div>
-    <div style="margin-top:32px;text-align:center;">
-      <a href="https://luma.com/ov35356l" target="_blank" class="btn btn-outline">View Course on Luma</a>
-    </div>
+<section class="work flip">
+  <div class="ph duo"><img class="desk" src="img/firstlight.jpg" alt="FirstLight on the web: Wake up with a sharper mind"><img class="phone" src="img/fl_mobile.jpg" alt="FirstLight on a phone, first onboarding screen"></div>
+  <div class="t">
+    <div class="n">04</div><div class="cat">Apps</div>
+    <h2>FirstLight</h2>
+    <p class="what">An iPhone and web app that measures how sharp you are each morning, against your own sleep.</p>
+    <p class="proof">A 90-second morning check, wearable data kept private, and a profile that learns your own pattern.</p>
+    <a class="go" href="https://firstlight-zoe-demo.vercel.app">firstlight-zoe-demo.vercel.app</a>
   </div>
 </section>
 
-<hr class="section-divider">
-
-<!-- RESOURCES -->
-<section id="resources">
-  <div class="container">
-    <div class="section-label">Free Resources</div>
-    <h2 class="section-title">Watch, Read & Learn</h2>
-    <p class="section-sub">Evidence-based materials from my talks, courses, and clinical practice. Free to watch, download, and share.</p>
-
-    <!-- FEATURED KEYNOTE VIDEO -->
-    <div class="resource-card" style="flex-direction:column;align-items:stretch;">
-      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;">
-        <span class="tag" style="background:rgba(245,200,66,0.1);border-color:rgba(245,200,66,0.2);color:var(--gold);">Featured Keynote</span>
-        <span class="tag">FutureHealth Basel 2026</span>
-      </div>
-      <h3 style="font-size:20px;font-weight:700;color:var(--text);margin-bottom:8px;">Sleep and Mental Health - Basel 2026 Keynote</h3>
-      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:18px;">
-        Full recording of my keynote at FutureHealth Basel 2026 on the bidirectional
-        relationship between sleep and mental health, the global insomnia epidemic, and
-        evidence-based interventions for better sleep and emotional well-being.
-      </p>
-      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px;border:1px solid var(--border);">
-        <iframe
-          src="https://www.youtube.com/embed/u7qgwSx3sq4"
-          title="Sleep and Mental Health - FutureHealth Basel 2026"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-          style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-      </div>
-      <div style="margin-top:14px;">
-        <a href="https://www.youtube.com/watch?v=u7qgwSx3sq4" target="_blank" class="card-link">Watch on YouTube <span>&rarr;</span></a>
-      </div>
-    </div>
-
-    <div class="resource-card">
-      <div class="resource-icon">&#x1F4CB;</div>
-      <div class="resource-info">
-        <h3>Your Sleep Blueprint - Cheat Sheet</h3>
-        <p>4-page evidence-based guide: chronotype quiz, personalized protocols, validated supplement stack (Huberman stack included), bedroom hacks, coping strategies, and a 7-day quick start. 12 references.</p>
-        <div class="tags">
-          <span class="tag">Chronotype Quiz</span>
-          <span class="tag">Supplement Stack</span>
-          <span class="tag">Bedroom Hacks</span>
-          <span class="tag">12 References</span>
-        </div>
-        <a href="sleep-blueprint.pdf" download class="btn btn-primary" style="font-size:14px;padding:11px 22px;">Download PDF</a>
-      </div>
-    </div>
-    <div class="resource-card">
-      <div class="resource-icon">&#x1F3AC;</div>
-      <div class="resource-info">
-        <h3>Basel Keynote - Companion Slides</h3>
-        <p>The full slide deck from the FutureHealth Basel 2026 keynote above. Useful as a standalone reference: every study citation, diagram, and actionable protocol in one scrollable deck.</p>
-        <div class="tags">
-          <span class="tag">Sleep Science</span>
-          <span class="tag">Mental Health</span>
-          <span class="tag">Conference Slides</span>
-        </div>
-        <a href="https://pitch.com/v/sleep-and-mental-health-rk7qv6" target="_blank" class="btn btn-outline" style="font-size:14px;padding:11px 22px;">View Slides</a>
-      </div>
-    </div>
+<section class="work">
+  <div class="ph solo"><img src="img/course.jpg" alt="The Sleep Performance course site"></div>
+  <div class="t">
+    <div class="n">05</div><div class="cat">Teaching</div>
+    <h2>Sleep Performance</h2>
+    <p class="what">A live course that teaches people to read their own wearable, see what their sleep is doing to their days, and test a change on themselves.</p>
+    <p class="proof">Five lessons, with tools that read your own sleep data.</p>
   </div>
 </section>
 
-<hr class="section-divider">
-
-<!-- TOOLS -->
-<section id="tools">
-  <div class="container">
-    <div class="section-label">Online Tools</div>
-    <h2 class="section-title">Interactive Sleep Tools</h2>
-    <p class="section-sub">Free tools to assess and understand your sleep.</p>
-
-    <div class="tool-featured">
-      <div style="flex-shrink:0;font-size:42px;">&#x1F9D3;</div>
-      <div>
-        <h3 style="font-size:18px;font-weight:700;color:var(--text);margin-bottom:4px;">Sleep Age Simulator</h3>
-        <p style="font-size:14px;color:var(--muted);margin-bottom:14px;">See how your sleep habits affect your biological age. Answer a few questions and compare your sleep metrics against population norms. Free, no signup.</p>
-        <a href="https://cavalpinarello.github.io/sleep-age-simulator/" target="_blank" class="btn btn-primary" style="font-size:14px;padding:11px 22px;">Try It Free</a>
-      </div>
-    </div>
-  </div>
+<section class="type">
+  <div class="it"><div class="n">06</div><div class="cat">Personal AI</div><h3>Tenzo</h3><p class="what">My AI chief of staff. It runs around the clock on a Mac mini, reads my calendar, mail, wearables and notes, and briefs me every morning.</p></div>
+  <div class="it"><div class="n">07</div><div class="cat">Mac app</div><h3>REEL</h3><p class="what">Turns voice recordings and meetings into searchable notes, with the speakers named. 400 automated tests.</p></div>
+  <div class="it"><div class="n">08</div><div class="cat">Clinical software</div><h3>ClinicalBridge</h3><p class="what">Moved a psychiatry practice's medical records to a new system. Paid, and in production.</p></div>
 </section>
 
-<hr class="section-divider">
 
-<!-- ZOE -->
-<section class="zoe-section" id="zoe">
-  <div class="container">
-    <div class="section-label">Platform</div>
-    <h2 class="section-title">Meet Zoe Sleep</h2>
-    <p class="section-sub">The precision sleep platform that makes your wearable truly useful.</p>
-
-    <div class="zoe-card">
-      <div>
-        <div class="zoe-badge">Beta Testers Welcome</div>
-        <h3 style="font-size:24px;font-weight:800;color:var(--text);margin-bottom:8px;">Your Wearable Gives You a Score.<br>Zoe Tells You Why - and What to Fix.</h3>
-        <p style="font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:4px;">
-          Phenotype-first, physician-designed. Two people with the same "poor sleep score"
-          get completely different protocols based on their unique biology.
-        </p>
-        <ul class="zoe-features">
-          <li><span class="ck">&#x2713;</span><span><b>Any wearable</b> - Apple Watch, Oura, WHOOP, Garmin</span></li>
-          <li><span class="ck">&#x2713;</span><span><b>Phenotype-first</b> - understand your unique sleep biology</span></li>
-          <li><span class="ck">&#x2713;</span><span><b>Physician-designed</b> - every protocol reviewed by a specialist</span></li>
-          <li><span class="ck">&#x2713;</span><span><b>Continuously improving</b> - your plan evolves with your data</span></li>
-        </ul>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;">
-          <a href="https://zoe-sleep.com" target="_blank" class="btn btn-mint">Join the Beta</a>
-          <a href="#contact" class="btn btn-outline">Start with a Consultation</a>
-        </div>
-      </div>
-      <div>
-        <div class="phone">
-          <div style="font-size:28px">&#x1F319;</div>
-          <div class="an">Zoe Sleep</div>
-          <div class="at">Precision Sleep Performance</div>
-          <div class="metrics">
-            <div class="metric"><div class="v" style="color:var(--mint)">92</div><div class="l">Score</div></div>
-            <div class="metric"><div class="v" style="color:var(--lavender)">87%</div><div class="l">Efficiency</div></div>
-            <div class="metric"><div class="v" style="color:var(--gold)">1:22</div><div class="l">Deep</div></div>
-            <div class="metric"><div class="v" style="color:var(--blue)">45ms</div><div class="l">HRV</div></div>
-          </div>
-          <div style="margin-top:12px;padding:8px;background:rgba(45,212,168,0.08);border:1px solid rgba(45,212,168,0.12);border-radius:6px;text-align:left">
-            <div style="font-size:8px;color:var(--mint);font-weight:600">TODAY'S INSIGHT</div>
-            <div style="font-size:9px;color:var(--muted);line-height:1.3;margin-top:2px">Your 2 PM caffeine delayed sleep onset by ~25 min.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<section class="sechead" id="talks"><div class="cat">Ideas from my talks</div><h2>On sleep</h2><p>What I've told rooms full of clinicians, founders and students, in a sentence each.</p></section>
+<section class="talks">
+  <div class="talk"><img src="img/basel.jpg" alt="Martin on stage at FutureHealth Basel 2026"><h3>Sleep loss takes the brakes off your emotions</h3><p class="idea">Sleep and mental health run both ways. A bad night makes the next day's feelings louder, and a worried mind makes the next night shorter. Treat one and the other moves.</p><p class="where">Keynote, FutureHealth Basel 2026</p><div class="gos"><a href="https://www.youtube.com/watch?v=u7qgwSx3sq4">Watch</a><a href="https://pitch.com/v/sleep-and-mental-health-rk7qv6">Slides</a></div></div>
+  <div class="talk"><h3>Founders run on borrowed sleep</h3><p class="idea">Tired people rate their own judgement as fine long after it isn't. For a founder, sleep is part of the job, the thing that lets serious people last.</p><p class="where">Sleep for Founders, Bay Area, June 2026</p></div>
+  <div class="talk"><h3>The oldest people sleep like they live</h3><p class="idea">What centenarians' sleep and daily rhythms tell the rest of us about ageing well, and what a wearable can and can't see of it.</p><p class="where">Sleep and Aging course, R42 Institute</p></div>
+</section>
+<section class="end" id="research">
+  <div class="cat">The research behind it</div>
+  <h2>BlueNotte: sleep and the people who reach a hundred</h2>
+  <p>At Stanford I investigate sleep and longevity. BlueNotte is my study of sleep among the centenarians of Sardinia, and most of what's on this page started there.</p>
+  <p><a href="https://profiles.stanford.edu/martin-kawalski">Stanford profile</a></p>
 </section>
 
-<hr class="section-divider">
 
-<!-- SPEAKER -->
-<section class="speaker-section" id="speaker">
-  <div class="speaker-bg"><img src="circadian-bg.png" alt="" loading="lazy"></div>
-  <div class="speaker-content container">
-    <div class="section-label">Speaking & Teaching</div>
-    <h2 class="section-title" style="text-align:center">Book Me for Your Event or Course</h2>
-    <p class="section-sub" style="text-align:center;margin:0 auto 40px">
-      Evidence-based talks and multi-week teaching on sleep, circadian medicine, wearables,
-      and longevity for conferences, universities, founder retreats, and corporate wellness.
-    </p>
-    <div class="speaker-card">
-      <h3 style="font-size:20px;font-weight:700;color:var(--text);margin-bottom:8px">Available Topics</h3>
-      <div class="speaker-topics">
-        <span class="speaker-topic">Sleep and Aging</span>
-        <span class="speaker-topic">Wearables in Clinical Practice</span>
-        <span class="speaker-topic">Sleep & Mental Health</span>
-        <span class="speaker-topic">Circadian Medicine</span>
-        <span class="speaker-topic">Sleep & Longevity</span>
-        <span class="speaker-topic">Founder Performance</span>
-        <span class="speaker-topic">Sleep in Blue Zones</span>
-        <span class="speaker-topic">Precision Sleep Protocols</span>
-      </div>
-      <p style="font-size:14px;color:var(--muted);margin-bottom:22px">
-        Formats range from 30-minute keynotes to multi-week cohort courses. Each engagement
-        is tailored to your audience and includes actionable, evidence-based takeaways.
-      </p>
-      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-        <a href="#contact" class="btn btn-primary">Inquire About Speaking</a>
-        <a href="mailto:martin@zoe-sleep.com?subject=Teaching%20Inquiry" class="btn btn-outline">Inquire About Teaching</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <div class="section-label">Get in Touch</div>
-    <h2 class="section-title">Work With Me</h2>
-    <p class="section-sub">Sleep consultation, speaking engagement, Zoe beta, or just a question.</p>
-
-    <div class="contact-grid">
-      <div class="contact-box">
-        <h3>Direct Contact</h3>
-        <p>I personally respond to every message. In-person consultations in the Bay Area and occasionally Vienna/Innsbruck, or virtually worldwide.</p>
-        <div class="ci"><span class="ico">&#x1F4E7;</span><a href="mailto:martin@zoe-sleep.com">martin@zoe-sleep.com</a></div>
-        <div class="ci"><span class="ico">&#x1F310;</span><a href="https://zoe-sleep.com" target="_blank">zoe-sleep.com</a></div>
-        <div class="ci"><span class="ico">&#x1F393;</span><a href="https://profiles.stanford.edu/martin-kawalski" target="_blank">Stanford Profile</a></div>
-        <div class="expect">
-          <div class="et">What to expect</div>
-          <li>&#x2713; Response within 24-48h</li>
-          <li>&#x2713; Free 15-min intro call available</li>
-          <li>&#x2713; Full sleep assessment: ~60 min</li>
-        </div>
-      </div>
-
-      <div class="contact-box">
-        <h3>Send a Message</h3>
-        <form id="contactForm" action="https://formspree.io/f/mpqyobpr" method="POST">
-          <input type="hidden" name="_subject" value="New inquiry from martin-sleep.vercel.app">
-          <input type="hidden" name="_next" value="https://martin-sleep.vercel.app/#contact">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required placeholder="Your name">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="_replyto" required placeholder="your@email.com">
-          </div>
-          <div class="form-group">
-            <label for="topic">I'm interested in...</label>
-            <select id="topic" name="topic">
-              <option value="Sleep Consultation">Sleep Consultation</option>
-              <option value="Speaking Engagement">Speaking Engagement</option>
-              <option value="Founder Sleep Program">Founder Sleep Program</option>
-              <option value="Zoe Sleep Beta">Zoe Sleep Beta</option>
-              <option value="Research Collaboration">Research Collaboration</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required placeholder="Tell me about your sleep goals, event, or question..."></textarea>
-          </div>
-          <input type="text" name="_gotcha" style="display:none">
-          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <p><a href="mailto:martin@zoe-sleep.com">martin@zoe-sleep.com</a> &bull; <a href="https://zoe-sleep.com" target="_blank">zoe-sleep.com</a> &bull; Sleep for Longevity & Performance</p>
-    <p style="margin-top:6px">&copy; 2026 Dr. Martin Kawalski. All rights reserved.</p>
-  </div>
-</footer>
-
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth',block:'start'})})
-});
-</script>
-</body>
-</html>
+<section class="contact" id="contact"><div class="cat">Contact</div><h2>Write to me</h2><p><a href="mailto:martin@zoe-sleep.com">martin@zoe-sleep.com</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/martinkawalski">LinkedIn</a></p></section>
+</body></html>
