@@ -1,167 +1,91 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Martin Kawalski, MD, PhD · Physician, founder, inventor</title>
-<meta name="description" content="Martin Kawalski, MD, PhD. At Stanford he investigates sleep and longevity, and he builds things people can use: Lumos, Snowcookie, Slumber AI, FirstLight.">
-<meta property="og:title" content="Martin Kawalski, MD, PhD"><meta property="og:image" content="https://martinkawalski.com/img/lumos_next.jpg">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F319;</text></svg>">
+<html lang="en" class="reel no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Martin Kawalski, MD, PhD · A doctor who builds things</title>
+<meta name="description" content="Martin Kawalski, MD, PhD. A doctor who builds things: Lumos, Snowcookie, Slumber AI, FirstLight, and sleep research at Stanford.">
+<meta property="og:title" content="Martin Kawalski, MD, PhD · A doctor who builds things"><meta property="og:description" content="Martin Kawalski, MD, PhD. A doctor who builds things: Lumos, Snowcookie, Slumber AI, FirstLight, and sleep research at Stanford."><meta property="og:image" content="https://martinkawalski.com/img/lumos_next.jpg">
+<meta name="theme-color" content="#120C08">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23F2B866'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Domine:wght@500;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#120C08;--bg2:#1C140E;--ink:#F3EADC;--soft:#C9BBA7;--dim:#8E7F6C;--amber:#F2B866;--line:#3A2C20;
---serif:'Domine',Georgia,serif;--sans:'Nunito Sans','Helvetica Neue',Arial,sans-serif}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--ink);font:19px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
-a{color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(242,184,102,.4)}
-a:hover{border-color:var(--amber)}
-.hero{position:relative;min-height:min(100vh,940px);display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
-.hero .t{padding:min(12vh,108px) 6vw min(8vh,72px);display:flex;flex-direction:column;justify-content:flex-end;gap:26px;position:relative;z-index:2}
-.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(60px,9vw,150px);line-height:.92;letter-spacing:-.02em}
-.hero .cred{font-family:var(--serif);font-size:clamp(24px,2.2vw,34px);color:var(--amber);margin-top:-6px}
-.hero .kick{font-size:15px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--amber)}
-.hero p{font-size:clamp(20px,1.7vw,26px);line-height:1.45;color:var(--soft);max-width:30ch}
-.hero .ph{position:relative}
-.hero .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%}
-.hero .ph:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 0%,rgba(18,12,8,0) 30%)}
-.cap{position:absolute;right:16px;bottom:14px;font-size:13px;color:rgba(243,234,220,.75);background:rgba(18,12,8,.55);padding:4px 10px;border-radius:999px;z-index:3}
-.work{position:relative;display:grid;grid-template-columns:1fr 1fr;min-height:min(86vh,760px);border-top:1px solid var(--line)}
-.work.flip .ph{order:2}
-.work .ph{position:relative;overflow:hidden;background:#000}
-.work .ph>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.work .duo{background:var(--bg2)}
-.work .duo>img.desk{position:absolute;inset:auto;left:7%;top:12%;width:78%;height:auto;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.6);border:1px solid #2c2219}
-.work .duo>img.phone{position:absolute;inset:auto;right:6%;bottom:8%;width:24%;height:auto;border-radius:22px;border:6px solid #0b0806;box-shadow:0 30px 70px rgba(0,0,0,.7)}
-.work .solo{background:var(--bg2);display:flex;align-items:center;justify-content:center;padding:6vw}
-.work .solo>img{position:static;width:100%;height:auto;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.6);border:1px solid #2c2219}
-.work .t{padding:min(10vh,90px) 6vw;display:flex;flex-direction:column;justify-content:center;gap:22px}
-.n{font-family:var(--serif);font-size:20px;color:var(--dim)}
-.cat{font-size:14px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--amber)}
-h2{font-family:var(--serif);font-weight:700;font-size:clamp(46px,5.6vw,92px);line-height:1;letter-spacing:-.015em}
-.what{font-size:clamp(20px,1.7vw,26px);line-height:1.45;color:var(--ink);max-width:32ch}
-.proof{font-size:18px;color:var(--soft);max-width:38ch}
-.go{font-size:18px;font-weight:700;align-self:flex-start}
-.type{border-top:1px solid var(--line);padding:min(12vh,108px) 6vw;display:grid;grid-template-columns:repeat(3,1fr);gap:6vw}
-.type .it{display:flex;flex-direction:column;gap:14px}
-.type h3{font-family:var(--serif);font-size:clamp(38px,3.6vw,60px);line-height:1}
-.type .what{font-size:21px;max-width:30ch}
-.end{border-top:1px solid var(--line);padding:min(14vh,126px) 6vw min(12vh,108px);display:flex;flex-direction:column;gap:24px;max-width:1100px}
-.end h2{font-size:clamp(36px,4vw,60px)}
-.end p{font-size:22px;color:var(--soft);max-width:48ch}
-@media(max-width:820px){
-  .hero,.work{grid-template-columns:1fr}
-  .hero .ph{min-height:min(62vh,560px);order:-1}
-  .hero .ph:after{background:linear-gradient(0deg,var(--bg) 0%,rgba(18,12,8,0) 40%)}
-  .work .ph{min-height:min(56vh,440px)}.work.flip .ph{order:0}
-  .work .solo{min-height:auto}
-  .type{grid-template-columns:1fr;gap:56px}
-}
+<link rel="stylesheet" href="/assets/site.css?v=9">
+<script>document.documentElement.classList.remove('no-js')</script>
+</head><body>
+<canvas id="fluid" aria-hidden="true"></canvas>
+<nav class="top"><a class="me" href="/">Martin Kawalski</a><div class="links"><a href="/#hardware">Hardware</a><a href="/#software">Software</a><a href="/#research">Medicine<span class="wide"> and research</span></a><a href="/#contact">Contact</a></div></nav>
 
-nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px 6vw;background:linear-gradient(180deg,rgba(18,12,8,.85),rgba(18,12,8,0))}
-nav .me{font-family:var(--serif);font-weight:700;font-size:20px;color:var(--ink);border:0}
-nav .links{display:flex;gap:28px}
-nav .links a{color:var(--soft);border:0;font-size:16px;font-weight:700}
-nav .links a:hover{color:var(--amber)}
-.hero .ph img.me{object-position:50% 20%}
-.sechead{border-top:1px solid var(--line);padding:min(12vh,108px) 6vw 0;display:flex;flex-direction:column;gap:16px}
-.sechead h2{font-size:clamp(40px,4.4vw,72px)}
-.sechead p{font-size:21px;color:var(--soft);max-width:52ch}
-.talks{padding:56px 6vw min(12vh,108px);display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:4vw;align-items:start}
-.talk{display:flex;flex-direction:column;gap:14px}
-.talk img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;border:1px solid #2c2219}
-.talk h3{font-family:var(--serif);font-size:clamp(28px,2.4vw,40px);line-height:1.1}
-.talk .idea{font-size:20px;line-height:1.45;color:var(--ink)}
-.talk .where{font-size:16px;color:var(--dim)}
-.talk .gos{display:flex;gap:20px;font-size:17px;font-weight:700}
-.contact{border-top:1px solid var(--line);padding:min(12vh,108px) 6vw;display:flex;flex-direction:column;gap:18px}
-.contact h2{font-size:clamp(36px,4vw,60px)}
-.contact p{font-size:22px;color:var(--soft)}
-@media(max-width:820px){nav .links{gap:16px}nav .links a{font-size:14px}.talks{grid-template-columns:1fr;gap:56px}}
-</style></head><body>
-<nav><a class="me" href="#">Martin Kawalski</a><div class="links"><a href="#work">Work</a><a href="#talks">Talks</a><a href="#research">Research</a><a href="#contact">Contact</a></div></nav>
-
-
-<section class="hero">
-  <div class="t">
-    <div class="kick">Physician · Founder · Inventor</div>
-    <h1>Martin<br>Kawalski</h1>
-    <div class="cred">MD, PhD</div>
-    <p>At Stanford I investigate sleep and longevity. I turn what I learn into things people can use, and right now I'm building Lumos.</p>
-  </div>
-  <div class="ph"><img class="me" src="martin.jpeg" alt="Martin Kawalski"></div>
+<section class="panel hero" id="top">
+  <div class="hero-photo"><img src="/martin.jpeg" alt="Martin Kawalski"></div>
+  <div class="copy rv"><div class="kick">Martin Kawalski, MD, PhD</div><h1>A doctor who builds things.</h1><p class="lead">I&#x27;ve worked as a doctor in a Himalayan village. At Stanford I investigate sleep and longevity, and I teach Sleep and Aging. When the thing my patients need doesn&#x27;t exist yet, I build it.</p>
+  <a class="scroll" href="#thread">See how it fits together</a></div>
 </section>
-
-<section class="sechead" id="work"><div class="cat">Things I've built</div><h2>Work</h2></section>
-<section class="work" style="border-top:0;margin-top:48px">
-  <div class="ph"><img src="img/lumos_next.jpg" alt="Lumos, a soft knit companion robot with one warm eye and glowing dots along its arm" style="object-position:60% 50%"><span class="cap">Lumos, design</span></div>
-  <div class="t">
-    <div class="n">01</div><div class="cat">Robotics · building now</div>
-    <h2>Lumos</h2>
-    <p class="what">I'm building Lumos, a companion robot for older adults who live alone. It talks, remembers your life, and nudges you back toward your people.</p>
-    <p class="proof">Yoichiro Hara and I are building it ourselves, from the software and our own fine-tuned model to the body. The working prototype talks with us every day.</p>
-  </div>
+<section class="panel thread" id="thread"><div class="inner"><div class="cat rv">One thread</div><h2 class="rv">From a village clinic to the workbench</h2><div class="beats"><div class="beat rv" style="--d:0ms"><div class="bv"><img src="/img/work/nepal/terraces.jpg" alt="" loading="lazy" decoding="async"></div><div class="n">01</div><h3>Nepal</h3><p>I worked as a doctor in a village in the Himalayan foothills and led an NGO there.</p></div><div class="beat rv" style="--d:120ms"><div class="bv"><img src="/img/work/bluenotte/bench.jpg" alt="" loading="lazy" decoding="async"><span class="cap">Illustration</span></div><div class="n">02</div><h3>Stanford and Sardinia</h3><p>At Stanford I investigate sleep and longevity. In Sardinia I study how people past a hundred sleep, and how rarely they&#x27;re left alone.</p></div><div class="beat rv" style="--d:240ms"><div class="bv"><img src="/img/work/lumos/title.jpg" alt="" loading="lazy" decoding="async"></div><div class="n">03</div><h3>The workbench</h3><p>A ski wearable with Bode Miller, clinical AI, apps for sleep, and now a robot. All of it is below.</p></div></div></div></section>
+<section class="panel intro" id="hardware"><div class="copy rv"><div class="cat">2 projects</div><h2 class="giant">Hardware</h2><p class="lead">The doctor at the workbench. Things you can pick up: sensors for skiers, and a robot that keeps people company.</p></div></section>
+<section class="panel proj k-photo" id="p-lumos">
+  <img class="bgimg" src="/img/lumos_next.jpg" alt="" style="object-position:60% 50%" loading="lazy" decoding="async"><div class="shade"></div><span class="cap">Design render</span>
+  <div class="copy rv"><div class="n">01</div><div class="cat">Robotics · building now</div><h2>Lumos</h2><p class="line">I&#x27;m building Lumos, a social robot. It starts with loneliness, as a companion for older adults who live alone.</p>
+  <a class="deeper" href="/work/lumos/">Go deeper<span aria-hidden="true"> &rarr;</span></a></div>
 </section>
-
-<section class="work flip">
-  <div class="ph"><img src="img/snowcookie.jpg" alt="A skier carving a turn, with sensor positions marked on her body" style="object-position:28% 30%"><span class="cap">Snowcookie</span></div>
-  <div class="t">
-    <div class="n">02</div><div class="cat">Hardware</div>
-    <h2>Snowcookie</h2>
-    <p class="what">A ski wearable that reads your body mechanics and measures fatigue, to prevent injuries on snow. I invented it with Olympic champion Bode Miller.</p>
-    <p class="proof">Finalist in Intel's Make It Wearable challenge. Taken from an idea to a product in stores, including in Japan.</p>
-  </div>
+<section class="panel proj k-photo" id="p-snowcookie">
+  <img class="bgimg" src="/img/work/snowcookie/ski.jpg" alt="" style="object-position:50% 60%" loading="lazy" decoding="async"><div class="shade"></div><span class="cap">Snowcookie on the ski</span>
+  <div class="copy rv"><div class="n">02</div><div class="cat">Wearables · ski</div><h2>Snowcookie</h2><p class="line">A ski wearable that reads your body mechanics and measures fatigue, to prevent injuries on snow. I invented it with Olympic champion Bode Miller.</p>
+  <a class="deeper" href="/work/snowcookie/">Go deeper<span aria-hidden="true"> &rarr;</span></a></div>
 </section>
-
-<section class="work">
-  <div class="ph duo"><img class="desk" src="img/slumber.jpg" alt="Slumber AI on a laptop"><img class="phone" src="img/slumber_m.jpg" alt="Slumber AI on a phone, with the intake form"></div>
-  <div class="t">
-    <div class="n">03</div><div class="cat">Clinical AI</div>
-    <h2>Slumber AI</h2>
-    <p class="what">An assistant that answers sleep surgery patients' questions before their operation, in their own language.</p>
-    <p class="proof">Tested by more than 40 sleep surgeons. Presented at AAO-HNSF 2025.</p>
-    <a class="go" href="https://slumber-ai.vercel.app">slumber-ai.vercel.app</a>
-  </div>
+<section class="panel intro" id="software"><div class="copy rv"><div class="cat">5 projects</div><h2 class="giant">Software</h2><p class="lead">Code I wrote because a patient, a clinic or my own day needed it.</p></div></section>
+<section class="panel proj k-screens" id="p-slumber-ai">
+  <div class="stage screens"><img class="desk" src="/img/slumber.jpg" alt="" loading="lazy" decoding="async"><img class="phone" src="/img/slumber_m.jpg" alt="" loading="lazy" decoding="async"></div>
+  <div class="copy rv"><div class="n">03</div><div class="cat">Clinical AI</div><h2>Slumber AI</h2><p class="line">An assistant that answers sleep surgery patients&#x27; questions before their operation, in their own language.</p>
+  <a class="deeper" href="/work/slumber-ai/">Go deeper<span aria-hidden="true"> &rarr;</span></a></div>
 </section>
-
-<section class="work flip">
-  <div class="ph duo"><img class="desk" src="img/firstlight.jpg" alt="FirstLight on the web: Wake up with a sharper mind"><img class="phone" src="img/fl_mobile.jpg" alt="FirstLight on a phone, first onboarding screen"></div>
-  <div class="t">
-    <div class="n">04</div><div class="cat">Apps</div>
-    <h2>FirstLight</h2>
-    <p class="what">An iPhone and web app that measures how sharp you are each morning, against your own sleep.</p>
-    <p class="proof">A 90-second morning check, wearable data kept private, and a profile that learns your own pattern.</p>
-    <a class="go" href="https://firstlight-zoe-demo.vercel.app">firstlight-zoe-demo.vercel.app</a>
-  </div>
+<section class="panel proj k-screens" id="p-firstlight">
+  <div class="stage screens"><img class="desk" src="/img/firstlight.jpg" alt="" loading="lazy" decoding="async"><img class="phone" src="/img/fl_mobile.jpg" alt="" loading="lazy" decoding="async"></div>
+  <div class="copy rv"><div class="n">04</div><div class="cat">Apps</div><h2>FirstLight</h2><p class="line">An iPhone and web app that measures how sharp you are each morning, against your own sleep.</p>
+  <a class="deeper" href="/work/firstlight/">Go deeper<span aria-hidden="true"> &rarr;</span></a></div>
 </section>
-
-<section class="work">
-  <div class="ph solo"><img src="img/course.jpg" alt="The Sleep Performance course site"></div>
-  <div class="t">
-    <div class="n">05</div><div class="cat">Teaching</div>
-    <h2>Sleep Performance</h2>
-    <p class="what">A live course that teaches people to read their own wearable, see what their sleep is doing to their days, and test a change on themselves.</p>
-    <p class="proof">Five lessons, with tools that read your own sleep data.</p>
-  </div>
+<section class="panel proj k-svg" id="p-tenzo">
+  <div class="stage art art-tenzo_brief"><svg viewBox="0 0 760 470" role="img" aria-label="A sample morning brief with made-up data">
+<rect x="10" y="10" width="740" height="450" rx="22" fill="#F6EFE4"/>
+<image href="/img/work/tenzo/tenzo.png" x="40" y="34" width="84" height="84"/>
+<text x="140" y="74" fill="#1A120C" font-size="30" font-weight="800" font-family="Nunito Sans, Helvetica, Arial, sans-serif">Good morning.</text>
+<text x="140" y="106" fill="#6b5b48" font-size="19" font-family="Nunito Sans, Helvetica, Arial, sans-serif">Tenzo, 7:00</text>
+<rect x="40" y="140" width="680" height="250" rx="14" fill="#1A120C"/><text x="60" y="190" fill="#F3EADC" font-size="25" font-family="Nunito Sans, Helvetica, Arial, sans-serif">Slept 7 h 10 m, a little under your usual.</text><text x="60" y="246" fill="#F3EADC" font-size="25" font-family="Nunito Sans, Helvetica, Arial, sans-serif">Three meetings. The first is at 9:30.</text><text x="60" y="302" fill="#F3EADC" font-size="25" font-family="Nunito Sans, Helvetica, Arial, sans-serif">One email has waited on you since Tuesday.</text><text x="60" y="358" fill="#F3EADC" font-size="25" font-family="Nunito Sans, Helvetica, Arial, sans-serif">You said you'd send the slides by Friday.</text>
+<text x="40" y="430" fill="#6b5b48" font-size="18" font-family="Nunito Sans, Helvetica, Arial, sans-serif">Sample brief. The data is made up for this page.</text>
+</svg></div>
+  <div class="copy rv"><div class="n">05</div><div class="cat">Personal AI</div><h2>Tenzo</h2><p class="line">My AI chief of staff. It runs around the clock on a Mac mini at home and briefs me every morning.</p>
+  <a class="deeper" href="/work/tenzo/">Go deeper<span aria-hidden="true"> &rarr;</span></a></div>
 </section>
-
-<section class="type">
-  <div class="it"><div class="n">06</div><div class="cat">Personal AI</div><h3>Tenzo</h3><p class="what">My AI chief of staff. It runs around the clock on a Mac mini, reads my calendar, mail, wearables and notes, and briefs me every morning.</p></div>
-  <div class="it"><div class="n">07</div><div class="cat">Mac app</div><h3>REEL</h3><p class="what">Turns voice recordings and meetings into searchable notes, with the speakers named. 400 automated tests.</p></div>
-  <div class="it"><div class="n">08</div><div class="cat">Clinical software</div><h3>ClinicalBridge</h3><p class="what">Moved a psychiatry practice's medical records to a new system. Paid, and in production.</p></div>
+<section class="panel proj k-screens" id="p-reel">
+  <div class="stage screens"><img class="desk" src="/img/work/reel/note.jpg" alt="" loading="lazy" decoding="async"></div>
+  <div class="copy rv"><div class="n">06</div><div class="cat">Mac app</div><h2>REEL</h2><p class="line">Turns voice recordings and meetings into notes you can search, with the speakers named.</p>
+  <a class="deeper" href="/work/reel/">Go deeper<span aria-hidden="true"> &rarr;</span></a></div>
 </section>
-
-
-<section class="sechead" id="talks"><div class="cat">Ideas from my talks</div><h2>On sleep</h2><p>What I've told rooms full of clinicians, founders and students, in a sentence each.</p></section>
-<section class="talks">
-  <div class="talk"><img src="img/basel.jpg" alt="Martin on stage at FutureHealth Basel 2026"><h3>Sleep loss takes the brakes off your emotions</h3><p class="idea">Sleep and mental health run both ways. A bad night makes the next day's feelings louder, and a worried mind makes the next night shorter. Treat one and the other moves.</p><p class="where">Keynote, FutureHealth Basel 2026</p><div class="gos"><a href="https://www.youtube.com/watch?v=u7qgwSx3sq4">Watch</a><a href="https://pitch.com/v/sleep-and-mental-health-rk7qv6">Slides</a></div></div>
-  <div class="talk"><h3>Founders run on borrowed sleep</h3><p class="idea">Tired people rate their own judgement as fine long after it isn't. For a founder, sleep is part of the job, the thing that lets serious people last.</p><p class="where">Sleep for Founders, Bay Area, June 2026</p></div>
-  <div class="talk"><h3>The oldest people sleep like they live</h3><p class="idea">What centenarians' sleep and daily rhythms tell the rest of us about ageing well, and what a wearable can and can't see of it.</p><p class="where">Sleep and Aging course, R42 Institute</p></div>
+<section class="panel proj k-svg" id="p-clinicalbridge">
+  <div class="stage art art-bridge"><svg viewBox="0 0 1270 510" role="img" aria-label="Six steps a chart takes from the old record system to the new one"><rect x="30" y="40" width="340" height="120" rx="16" fill="#1C140E" stroke="#3A2C20" stroke-width="2"/><text x="50" y="74" fill="#F2B866" font-size="17" font-weight="800" font-family="Nunito Sans, Helvetica, Arial, sans-serif">01</text><text x="50" y="102" fill="#F3EADC" font-size="24" font-weight="800" font-family="Nunito Sans, Helvetica, Arial, sans-serif">Old record system</text><text x="50" y="132" fill="#C9BBA7" font-size="18" font-family="Nunito Sans, Helvetica, Arial, sans-serif">every chart, as it is</text><line x1="370" y1="100" x2="430" y2="100" stroke="#F2B866" stroke-width="2.5" stroke-dasharray="6 8" class="flow"/><circle cx="430" cy="100" r="5" fill="#F2B866"/><rect x="430" y="40" width="340" height="120" rx="16" fill="#1C140E" stroke="#3A2C20" stroke-width="2"/><text x="450" y="74" fill="#F2B866" font-size="17" font-weight="800" font-family="Nunito Sans, Helvetica, Arial, sans-serif">02</text><text x="450" y="102" fill="#F3EADC" font-size="24" font-weight="800" font-family="Nunito Sans, Helvetica, Arial, sans-serif">Export</text><text x="450" y="132" fill="#C9BBA7" font-size="18" font-family="Nunito Sans, Helvetica, Arial, sans-serif">API data and PDF documents</text><line x1="770" y1="100" x2="830" y2="100" stroke="#F2B866" stroke-width="2.5" stroke-dasharray="6 8" class="flow"/><circle cx="830" cy="100" r="5" fill="#F2B866"/><rect x="830" y="40" width="340" height="120" rx="16" fill="#1C140E" stroke="#3A2C20" stroke-width="2"/><text x="850" y="74" fill="#F2B866" font-size="17" font-weight="800" font-family="Nunito Sans, Helvetica, Arial, sans-serif">03</text><text x="850" y="102" fill="#F3EADC" font-size="24" font-weight="800" font-family="Nunito Sans, Helvetica, Arial, sans-serif">Check</text><text x="850" y="132" fill="#C9BBA7" font-size="18" font-family="Nunito Sans, Helvetica, Arial, sans-serif">validate before anything moves</text><rect x="30" y="250" width="340" height="120" rx="16" fill="#1C140E" stroke="#3A2C20" stroke-width="2"/><text x="50" y="284" fill="#F2B866" font-size="17" font-weight="800" font-family="Nunito Sans, Helvetica, Arial, sans-serif">04</text><text x="50" y="312" fill="#F3EADC" font-size="24" font-weight="800" font-family="Nunito Sans, Helvetica, Arial, sans-serif">Map</text><text x="50" y="342" fill="#C9BBA7" font-size="18" font-family="Nunito Sans, Helvetica, Arial, sans-serif">every field, in a visual mapper</text><line x1="370" y1="310" x2="430" y2="310" stroke="#F2B866" stroke-width="2.5" stroke-dasharray="6 8" class="flow"/><circle cx="430" cy="310" r="5" fill="#F2B866"/><rect x="430" y="250" width="340" height="120" rx="16" fill="#1C140E" stroke="#3A2C20" stroke-width="2"/><text x="450" y="284" fill="#F2B866" font-size="17" font-weight="800" font-family="Nunito Sans, Helvetica, Arial, sans-serif">05</text><text x="450" y="312" fill="#F3EADC" font-size="24" font-weight="800" font-family="Nunito Sans, Helvetica, Arial, sans-serif">Load</text><text x="450" y="342" fill="#C9BBA7" font-size="18" font-family="Nunito Sans, Helvetica, Arial, sans-serif">into the new system</text><line x1="770" y1="310" x2="830" y2="310" stroke="#F2B866" stroke-width="2.5" stroke-dasharray="6 8" class="flow"/><circle cx="830" cy="310" r="5" fill="#F2B866"/><rect x="830" y="250" width="340" height="120" rx="16" fill="#1C140E" stroke="#3A2C20" stroke-width="2"/><text x="850" y="284" fill="#F2B866" font-size="17" font-weight="800" font-family="Nunito Sans, Helvetica, Arial, sans-serif">06</text><text x="850" y="312" fill="#F3EADC" font-size="24" font-weight="800" font-family="Nunito Sans, Helvetica, Arial, sans-serif">Verify</text><text x="850" y="342" fill="#C9BBA7" font-size="18" font-family="Nunito Sans, Helvetica, Arial, sans-serif">what arrived matches what left</text><path d="M1000 160 C1000 205 200 205 200 245" fill="none" stroke="#F2B866" stroke-width="2.5" stroke-dasharray="6 8" class="flow"/><circle cx="200" cy="248" r="5" fill="#F2B866"/><rect x="30" y="420" width="1140" height="70" rx="14" fill="none" stroke="#3A2C20" stroke-width="2"/><text x="600" y="463" text-anchor="middle" fill="#C9BBA7" font-size="20" font-family="Nunito Sans, Helvetica, Arial, sans-serif">Underneath every step: an audit log, encryption, a dry run and a rollback</text></svg></div>
+  <div class="copy rv"><div class="n">07</div><div class="cat">Clinical software</div><h2>ClinicalBridge</h2><p class="line">Moved a psychiatry practice&#x27;s medical records to a new system. Paid, and in production.</p>
+  <a class="deeper" href="/work/clinicalbridge/">Go deeper<span aria-hidden="true"> &rarr;</span></a></div>
 </section>
-<section class="end" id="research">
-  <div class="cat">The research behind it</div>
-  <h2>BlueNotte: sleep and the people who reach a hundred</h2>
-  <p>At Stanford I investigate sleep and longevity. BlueNotte is my study of sleep among the centenarians of Sardinia, and most of what's on this page started there.</p>
-  <p><a href="https://profiles.stanford.edu/martin-kawalski">Stanford profile</a></p>
+<section class="panel intro" id="research"><div class="copy rv"><div class="cat">4 projects</div><h2 class="giant">Medicine and research</h2><p class="lead">The doctor&#x27;s half of the job, where every build starts: a village in Nepal, the centenarians of Sardinia, and the rooms where I teach.</p></div></section>
+<section class="panel proj k-photo" id="p-bluenotte">
+  <img class="bgimg" src="/img/work/bluenotte/bench.jpg" alt="" style="object-position:40% 40%" loading="lazy" decoding="async"><div class="shade"></div><span class="cap">Illustration, not a study participant</span>
+  <div class="copy rv"><div class="n">08</div><div class="cat">Stanford research · Sardinia</div><h2>BlueNotte</h2><p class="line">How do people who live past a hundred sleep? At Stanford I investigate sleep and longevity, and BlueNotte takes the question to Sardinia.</p>
+  <a class="deeper" href="/work/bluenotte/">Go deeper<span aria-hidden="true"> &rarr;</span></a></div>
 </section>
-
-
-<section class="contact" id="contact"><div class="cat">Contact</div><h2>Write to me</h2><p><a href="mailto:martin@zoe-sleep.com">martin@zoe-sleep.com</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/martinkawalski">LinkedIn</a></p></section>
+<section class="panel proj k-photo" id="p-nepal">
+  <img class="bgimg" src="/img/work/nepal/golden.jpg" alt="" style="object-position:50% 50%" loading="lazy" decoding="async"><div class="shade"></div><span class="cap">Nepal</span>
+  <div class="copy rv"><div class="n">09</div><div class="cat">Medicine · Nepal</div><h2>The Himalayas</h2><p class="line">Before Stanford, I was a doctor in Nepal, in a village in the Himalayan foothills, and I led an NGO there.</p>
+  <a class="deeper" href="/work/nepal/">Go deeper<span aria-hidden="true"> &rarr;</span></a></div>
+</section>
+<section class="panel proj k-screens" id="p-sleep-and-aging">
+  <div class="stage screens"><img class="desk" src="/img/work/teaching/weeks.jpg" alt="" loading="lazy" decoding="async"></div>
+  <div class="copy rv"><div class="n">10</div><div class="cat">Teaching</div><h2>Sleep and Aging</h2><p class="line">I teach Sleep and Aging at the R42 Institute: what happens to sleep as we get older, and what the centenarians do differently.</p>
+  <a class="deeper" href="/work/sleep-and-aging/">Go deeper<span aria-hidden="true"> &rarr;</span></a></div>
+</section>
+<section class="panel proj k-screens" id="p-sleep-performance">
+  <div class="stage screens"><img class="desk" src="/img/work/sleep-performance/lesson1.jpg" alt="" loading="lazy" decoding="async"></div>
+  <div class="copy rv"><div class="n">11</div><div class="cat">Teaching</div><h2>Sleep Performance</h2><p class="line">A live course that teaches people to read their own wearable, see what their sleep is doing to their days, and test a change on themselves.</p>
+  <a class="deeper" href="/work/sleep-performance/">Go deeper<span aria-hidden="true"> &rarr;</span></a></div>
+</section>
+<section class="panel talks-p" id="talks"><div class="inner"><div class="cat rv">From my talks</div><h2 class="rv">On sleep</h2><div class="talks"><div class="talk rv"><img src="/img/basel.jpg" alt="Martin on stage" loading="lazy"><h3>Sleep loss takes the brakes off your emotions</h3><p class="idea">Sleep and mental health run both ways. A bad night makes the next day&#x27;s feelings louder, and a worried mind makes the next night shorter. Treat one and the other moves.</p><p class="where">Keynote, FutureHealth Basel 2026</p><div class="gos"><a href="https://www.youtube.com/watch?v=u7qgwSx3sq4">Watch</a><a href="https://pitch.com/v/sleep-and-mental-health-rk7qv6">Slides</a></div></div><div class="talk rv"><h3>Founders run on borrowed sleep</h3><p class="idea">Tired people rate their own judgement as fine long after it isn&#x27;t. For a founder, sleep is part of the job.</p><p class="where">Sleep for Founders, Bay Area, June 2026</p><div class="gos"></div></div><div class="talk rv"><h3>The oldest people sleep like they live</h3><p class="idea">What centenarians&#x27; sleep and daily rhythms tell the rest of us about ageing well, and what a wearable can and can&#x27;t see of it.</p><p class="where">Sleep and Aging course, R42 Institute</p><div class="gos"></div></div></div></div></section>
+<footer class="contact" id="contact"><div class="cat">Contact</div><h2>Write to me</h2>
+<p><a href="mailto:martin@zoe-sleep.com">martin@zoe-sleep.com</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/martinkawalski">LinkedIn</a> &nbsp;·&nbsp; <a href="https://profiles.stanford.edu/martin-kawalski">Stanford profile</a></p></footer>
+<script src="/assets/github.js?v=9"></script><script src="/assets/site.js?v=9" defer></script>
 </body></html>
