@@ -1,5 +1,8 @@
 """Copy and media for martinkawalski.com. Edit here, then run: python3 site-src/build.py"""
 
+# Paste the TEDx talk URL here to add a "Watch the TEDx talk" link on the Nepal page. Empty = no link.
+TEDX_URL = ""
+
 HERO = {
     "kick": "Martin Kawalski, MD, PhD",
     "h1": "A doctor who builds things.",
@@ -9,11 +12,11 @@ HERO = {
 
 THREAD = [
     ("Nepal", "img/work/nepal/terraces.jpg",
-     "I worked as a doctor in a village in the Himalayan foothills and led an NGO there."),
+     "I've worked as a doctor in a village in the Himalayan foothills, and led an NGO there."),
     ("Stanford and Sardinia", "img/work/bluenotte/bench.jpg",
      "At Stanford I investigate sleep and longevity. In Sardinia I study how people past a hundred sleep, and how rarely they're left alone."),
     ("The workbench", "img/work/lumos/title.jpg",
-     "A ski wearable with Bode Miller, clinical AI, apps for sleep, and now a robot. All of it is below."),
+     "A ski wearable with Bode Miller, clinical AI, apps for sleep, and a robot. All of it is below."),
 ]
 
 CATS = [
@@ -156,12 +159,11 @@ P = [
          nexth="What's next", next="Okinawa, with the University of the Ryukyus Hospital, so we can compare two long-lived populations with very different genes and diets."),
 
     dict(slug="nepal", cat="research", title="The Himalayas", kick="Medicine · Nepal",
-         line="Before Stanford, I was a doctor in Nepal, in a village in the Himalayan foothills, and I led an NGO there.",
-         lead="Before Stanford, I was a doctor in Nepal, in a village in the Himalayan foothills, and I led an NGO there.",
+         line="I've worked as a doctor in Nepal, in a village in the Himalayan foothills, and led an NGO there.",
+         lead="I've worked as a doctor in Nepal, in a village in the Himalayan foothills, and led an NGO there.",
          media=("photo", "img/work/nepal/golden.jpg", "50% 50%"), cap="Nepal",
          builth="What I did there",
-         built=["I lived in the village, worked there as a doctor, and led an NGO that supported it.",
-                "Medicine there runs on what someone can carry up the trail. That's where I learned that a tool is only as good as the place it has to work in."],
+         built=["I lived in the village, worked there as a doctor, and led an NGO that supported it."],
          how=[],
          gallery=[("img/work/nepal/terraces.jpg", "Terraced fields below the village."),
                   ("img/work/nepal/porters.jpg", "Everything arrives on someone's back."),
